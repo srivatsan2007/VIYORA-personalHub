@@ -216,6 +216,100 @@
                 android:resource="@xml/widget_oneui_battery_info" />
         </receiver>
 
+        <!-- Sheer & Outline KWGT Style Widgets -->
+        <receiver
+            android:name=".widget.SheerMusicWidgetProvider"
+            android:exported="true"
+            android:label="@string/widget_sheer_music_label">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_sheer_music_info" />
+        </receiver>
+
+        <receiver
+            android:name=".widget.SleepingClockWidgetProvider"
+            android:exported="true"
+            android:label="@string/widget_sleeping_clock_label">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_sleeping_clock_info" />
+        </receiver>
+
+        <receiver
+            android:name=".widget.VerticalCapsuleClockWidgetProvider"
+            android:exported="true"
+            android:label="@string/widget_capsule_clock_label">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_vertical_capsule_clock_info" />
+        </receiver>
+
+        <receiver
+            android:name=".widget.DottedBatteryWidgetProvider"
+            android:exported="true"
+            android:label="@string/widget_dotted_battery_label">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+                <action android:name="android.intent.action.BATTERY_LOW" />
+                <action android:name="android.intent.action.BATTERY_OKAY" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_dotted_battery_card_info" />
+        </receiver>
+
+        <receiver
+            android:name=".widget.StorageCapsuleWidgetProvider"
+            android:exported="true"
+            android:label="@string/widget_storage_capsule_label">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_storage_capsule_info" />
+        </receiver>
+
+        <receiver
+            android:name=".widget.MiniCalendarWidgetProvider"
+            android:exported="true"
+            android:label="@string/widget_sheer_calendar_label">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_minimal_calendar_info" />
+        </receiver>
+
+        <receiver
+            android:name=".widget.TallOutlineClockWidgetProvider"
+            android:exported="true"
+            android:label="@string/widget_outline_tall_clock_label">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_outline_tall_clock_info" />
+        </receiver>
+
     </application>
 
 </manifest>

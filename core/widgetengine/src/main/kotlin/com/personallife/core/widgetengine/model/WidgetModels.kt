@@ -240,10 +240,24 @@ data class WidgetThemePreset(
             isDarkTheme = true
         )
 
+        val SHEER_MIDNIGHT = WidgetThemePreset(
+            name = "SHEER_MIDNIGHT",
+            displayName = "Sheer KWGT",
+            backgroundColorHex = "#0B1220",
+            accentColorHex = "#5C7CFA",
+            textColorHex = "#FFFFFF",
+            secondaryTextColorHex = "#94A3B8",
+            glassOpacity = 0.95f,
+            cornerRadiusDp = 28,
+            borderWidthDp = 1.5f,
+            isDarkTheme = true
+        )
+
         val allPresets = listOf(
             OLIVE_AND_CREAM,
             MINT_AND_LAVENDER,
             FROSTED_GLASS,
+            SHEER_MIDNIGHT,
             PIXEL_MATERIAL_YOU,
             NOTHING_DOT,
             ONE_UI,

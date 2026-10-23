@@ -36,4 +36,20 @@
     <string name="widget_oneui_clock_desc">Samsung One UI 26dp squircle with real-time time and system pill</string>
     <string name="widget_oneui_battery_label">One UI: Device Battery Card</string>
     <string name="widget_oneui_battery_desc">Samsung One UI multi-device style battery progress card</string>
+
+    <!-- Sheer & Outline KWGT Style Widgets -->
+    <string name="widget_sheer_music_label">Sheer: Duotone Music Player</string>
+    <string name="widget_sheer_music_desc">Ed Sheeran Shape of You style duotone silhouette media player</string>
+    <string name="widget_sleeping_clock_label">Sheer: Sleeping Moon Clock</string>
+    <string name="widget_sleeping_clock_desc">Minimalist time with cornflower blue sleeping moon face</string>
+    <string name="widget_capsule_clock_label">Sheer: Vertical Capsule Clock</string>
+    <string name="widget_capsule_clock_desc">Futuristic dual-stacked vertical pill timekeeper</string>
+    <string name="widget_dotted_battery_label">Sheer: Dotted Matrix Battery</string>
+    <string name="widget_dotted_battery_desc">Live discharging percent and state in dotted matrix typography</string>
+    <string name="widget_storage_capsule_label">Sheer: Storage Meter Capsule</string>
+    <string name="widget_storage_capsule_desc">Stadium capsule displaying live phone storage usage</string>
+    <string name="widget_sheer_calendar_label">Sheer: Minimalist Calendar</string>
+    <string name="widget_sheer_calendar_desc">Compact monthly calendar with today\'s highlighted date</string>
+    <string name="widget_outline_tall_clock_label">Sheer: Tall Outline Numbers Clock</string>
+    <string name="widget_outline_tall_clock_desc">Signature ultra-tall outlined clock with top-right date badge</string>
 </resources>

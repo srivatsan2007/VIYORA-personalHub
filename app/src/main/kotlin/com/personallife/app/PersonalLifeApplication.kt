@@ -6,12 +6,17 @@ import android.content.Context
 import android.content.Intent
 import android.content.IntentFilter
 import com.personallife.app.widget.BatteryWidgetProvider
+import com.personallife.app.widget.DottedBatteryWidgetProvider
+import com.personallife.app.widget.MiniCalendarWidgetProvider
 import com.personallife.app.widget.NothingBatteryWidgetProvider
 import com.personallife.app.widget.NothingClockWidgetProvider
 import com.personallife.app.widget.OneUiBatteryWidgetProvider
 import com.personallife.app.widget.OneUiClockWidgetProvider
 import com.personallife.app.widget.PixelAtAGlanceWidgetProvider
 import com.personallife.app.widget.PixelClockWidgetProvider
+import com.personallife.app.widget.SleepingClockWidgetProvider
+import com.personallife.app.widget.StorageCapsuleWidgetProvider
+import com.personallife.app.widget.TallOutlineClockWidgetProvider
 import dagger.hilt.android.HiltAndroidApp
 
 @HiltAndroidApp
@@ -28,6 +33,11 @@ class PersonalLifeApplication : Application() {
                 NothingBatteryWidgetProvider.updateAll(context)
                 OneUiClockWidgetProvider.updateAll(context)
                 OneUiBatteryWidgetProvider.updateAll(context)
+                DottedBatteryWidgetProvider.updateAll(context)
+                SleepingClockWidgetProvider.updateAll(context)
+                StorageCapsuleWidgetProvider.updateAll(context)
+                MiniCalendarWidgetProvider.updateAll(context)
+                TallOutlineClockWidgetProvider.updateAll(context)
             }
         }
     }

@@ -98,6 +98,7 @@ fun WidgetPreviewRenderer(
             WidgetCategory.FINANCE -> FinancePreviewContent(definition, configuration, accentColor, textColor, subtextColor)
             WidgetCategory.HEALTH -> HealthPreviewContent(definition, configuration, accentColor, textColor, subtextColor)
             WidgetCategory.NOTES -> NotesPreviewContent(definition, configuration, accentColor, textColor, subtextColor)
+            WidgetCategory.CALENDAR -> CalendarPreviewContent(definition, configuration, accentColor, textColor, subtextColor)
             WidgetCategory.SYSTEM_INFO -> SystemInfoPreviewContent(definition, configuration, accentColor, textColor, subtextColor)
             WidgetCategory.ECOSYSTEM -> EcosystemPreviewContent(definition, configuration, accentColor, textColor, subtextColor)
             else -> GenericPreviewContent(definition, configuration, accentColor, textColor, subtextColor)
@@ -124,6 +125,64 @@ private fun ClockPreviewContent(
     val currentDate = SimpleDateFormat(config.dateFormat.ifBlank { "EEEE, MMMM d" }, Locale.getDefault()).format(Date())
 
     when (definition.id) {
+        "sheer_sleeping_clock" -> {
+            Row(
+                modifier = Modifier.fillMaxWidth().padding(4.dp),
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.SpaceBetween
+            ) {
+                Column(modifier = Modifier.weight(1f)) {
+                    Text(text = currentTime, color = Color.White, fontSize = 34.sp, fontWeight = FontWeight.Black)
+                    Text(text = "Monday", color = Color.White, fontSize = 14.sp, fontWeight = FontWeight.Bold)
+                    Text(text = "27 Sept", color = Color(0xFF94A3B8), fontSize = 12.sp)
+                }
+                Box(
+                    modifier = Modifier
+                        .size(68.dp)
+                        .clip(RoundedCornerShape(topStart = 68.dp, bottomEnd = 16.dp))
+                        .background(Color(0xFF5C7CFA)),
+                    contentAlignment = Alignment.Center
+                ) {
+                    Text(text = "˘ ᵕ ˘", color = Color(0xFF0B1220), fontSize = 24.sp, fontWeight = FontWeight.Bold)
+                }
+            }
+        }
+        "sheer_capsule_clock" -> {
+            Column(
+                modifier = Modifier.fillMaxWidth().padding(8.dp),
+                horizontalAlignment = Alignment.CenterHorizontally
+            ) {
+                Text(text = "22", color = Color.White, fontSize = 26.sp, fontFamily = FontFamily.Monospace, fontWeight = FontWeight.Bold)
+                Box(modifier = Modifier.size(width = 16.dp, height = 2.dp).background(Color(0xFF5C7CFA).copy(alpha = 0.4f)))
+                Text(text = "10", color = Color(0xFF5C7CFA), fontSize = 26.sp, fontFamily = FontFamily.Monospace, fontWeight = FontWeight.Bold)
+            }
+        }
+        "sheer_outline_tall_clock" -> {
+            Box(modifier = Modifier.fillMaxWidth().padding(4.dp)) {
+                Column(modifier = Modifier.align(Alignment.CenterStart)) {
+                    Text(
+                        text = "12\n06",
+                        color = Color.White,
+                        fontSize = 40.sp,
+                        fontWeight = FontWeight.ExtraLight,
+                        lineHeight = 38.sp,
+                        letterSpacing = 2.sp
+                    )
+                }
+                Box(
+                    modifier = Modifier
+                        .align(Alignment.TopEnd)
+                        .clip(RoundedCornerShape(14.dp))
+                        .background(Color(0xFF5C7CFA))
+                        .padding(horizontal = 12.dp, vertical = 6.dp)
+                ) {
+                    Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                        Text(text = "06", color = Color.White, fontSize = 16.sp, fontWeight = FontWeight.Black)
+                        Text(text = "FRI", color = Color.White, fontSize = 10.sp, fontWeight = FontWeight.Bold)
+                    }
+                }
+            }
+        }
         "clock_analog_classic", "clock_roman_analog" -> {
             Row(
                 modifier = Modifier.fillMaxWidth(),
@@ -289,6 +348,49 @@ private fun MusicPreviewContent(
     textColor: Color,
     subtextColor: Color
 ) {
+    if (definition.id == "sheer_duotone_music") {
+        Row(
+            modifier = Modifier.fillMaxWidth(),
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            Box(
+                modifier = Modifier
+                    .size(width = 68.dp, height = 76.dp)
+                    .clip(RoundedCornerShape(16.dp))
+                    .background(Color(0xFF5C7CFA)),
+                contentAlignment = Alignment.Center
+            ) {
+                Text(text = "🎧", fontSize = 28.sp)
+            }
+            Spacer(modifier = Modifier.width(12.dp))
+            Column(modifier = Modifier.weight(1f)) {
+                Text(text = "Shape of You", color = Color.White, fontSize = 16.sp, fontWeight = FontWeight.Bold)
+                Text(text = "Ed Sheeran", color = Color(0xFF94A3B8), fontSize = 12.sp)
+                Spacer(modifier = Modifier.height(6.dp))
+                LinearProgressIndicator(
+                    progress = { 0.35f },
+                    modifier = Modifier.fillMaxWidth().height(4.dp).clip(RoundedCornerShape(2.dp)),
+                    color = Color(0xFF5C7CFA),
+                    trackColor = Color(0xFF1E293B)
+                )
+                Spacer(modifier = Modifier.height(4.dp))
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.SpaceBetween
+                ) {
+                    Text(text = "1:24", color = Color(0xFF64748B), fontSize = 10.sp)
+                    Row {
+                        Text(text = "⏮ ", color = Color.White, fontSize = 12.sp)
+                        Text(text = " ▶ ", color = Color(0xFF5C7CFA), fontSize = 12.sp)
+                        Text(text = " ⏭", color = Color.White, fontSize = 12.sp)
+                    }
+                    Text(text = "3:54", color = Color(0xFF64748B), fontSize = 10.sp)
+                }
+            }
+        }
+        return
+    }
+
     Column {
         Row(
             modifier = Modifier.fillMaxWidth(),
@@ -351,6 +453,23 @@ private fun BatteryPreviewContent(
     textColor: Color,
     subtextColor: Color
 ) {
+    if (definition.id == "sheer_dotted_battery") {
+        Box(modifier = Modifier.fillMaxWidth().padding(4.dp)) {
+            Box(
+                modifier = Modifier
+                    .align(Alignment.TopEnd)
+                    .size(36.dp)
+                    .clip(RoundedCornerShape(bottomStart = 20.dp))
+                    .background(Color(0xFF5C7CFA))
+            )
+            Column(modifier = Modifier.padding(top = 12.dp)) {
+                Text(text = "discharging", color = Color(0xFF94A3B8), fontSize = 13.sp, fontFamily = FontFamily.Monospace)
+                Text(text = "52%", color = Color.White, fontSize = 36.sp, fontWeight = FontWeight.Black, fontFamily = FontFamily.Monospace)
+            }
+        }
+        return
+    }
+
     Row(
         modifier = Modifier.fillMaxWidth(),
         verticalAlignment = Alignment.CenterVertically,
@@ -736,6 +855,36 @@ private fun NotesPreviewContent(
 }
 
 // -------------------------------------------------------------
+// CATEGORY: CALENDAR PREVIEW CONTENT
+// -------------------------------------------------------------
+@Composable
+private fun CalendarPreviewContent(
+    definition: WidgetDefinition,
+    config: WidgetConfiguration,
+    accentColor: Color,
+    textColor: Color,
+    subtextColor: Color
+) {
+    Column(
+        modifier = Modifier.fillMaxWidth().padding(4.dp),
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
+        Text(text = "OCTOBER 2026", color = Color(0xFF5C7CFA), fontSize = 13.sp, fontWeight = FontWeight.Black)
+        Spacer(modifier = Modifier.height(6.dp))
+        Box(
+            modifier = Modifier
+                .clip(RoundedCornerShape(12.dp))
+                .background(Color(0xFF5C7CFA).copy(alpha = 0.2f))
+                .padding(horizontal = 14.dp, vertical = 6.dp)
+        ) {
+            Text(text = "TODAY • 23 FRI", color = Color.White, fontSize = 14.sp, fontWeight = FontWeight.Bold)
+        }
+        Spacer(modifier = Modifier.height(4.dp))
+        Text(text = "No events scheduled", color = Color(0xFF94A3B8), fontSize = 11.sp)
+    }
+}
+
+// -------------------------------------------------------------
 // CATEGORY O: SYSTEM INFO PREVIEW CONTENT
 // -------------------------------------------------------------
 @Composable
@@ -746,6 +895,19 @@ private fun SystemInfoPreviewContent(
     textColor: Color,
     subtextColor: Color
 ) {
+    if (definition.id == "sheer_storage_capsule") {
+        Row(
+            modifier = Modifier.fillMaxWidth().padding(horizontal = 8.dp, vertical = 4.dp),
+            verticalAlignment = Alignment.CenterVertically,
+            horizontalArrangement = Arrangement.Center
+        ) {
+            Text(text = "💾", fontSize = 14.sp)
+            Spacer(modifier = Modifier.width(8.dp))
+            Text(text = "128.4 / 256 GB", color = Color.White, fontSize = 14.sp, fontFamily = FontFamily.Monospace, fontWeight = FontWeight.Bold)
+        }
+        return
+    }
+
     Column {
         Row(
             modifier = Modifier.fillMaxWidth(),

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widget_vertical_capsule_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/widget_sheer_pill"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="12dp">
+
+    <!-- Hours (e.g. 22) -->
+    <TextClock
+        android:id="@+id/widget_capsule_hours"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="monospace"
+        android:format12Hour="hh"
+        android:format24Hour="HH"
+        android:letterSpacing="0.05"
+        android:textColor="#FFFFFF"
+        android:textSize="26sp" />
+
+    <!-- Subtle divider or dot -->
+    <View
+        android:layout_width="16dp"
+        android:layout_height="2dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
+        android:background="#335C7CFA" />
+
+    <!-- Minutes (e.g. 10) -->
+    <TextClock
+        android:id="@+id/widget_capsule_minutes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="monospace"
+        android:format12Hour="mm"
+        android:format24Hour="mm"
+        android:letterSpacing="0.05"
+        android:textColor="#5C7CFA"
+        android:textSize="26sp" />
+
+</LinearLayout>

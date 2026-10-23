@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="80dp"
+    android:height="80dp"
+    android:viewportWidth="80"
+    android:viewportHeight="80">
+    <!-- Soft Cornflower Blue Semicircle Face -->
+    <path
+        android:fillColor="#5C7CFA"
+        android:pathData="M8,76 C8,38 38,8 76,8 L76,76 Z" />
+    <!-- Sleeping Left Eye Arc -->
+    <path
+        android:strokeColor="#0B1220"
+        android:strokeWidth="3.5"
+        android:strokeLineCap="round"
+        android:fillColor="#00000000"
+        android:pathData="M32,46 C36,40 44,40 48,46" />
+    <!-- Sleeping Right Eye Arc -->
+    <path
+        android:strokeColor="#0B1220"
+        android:strokeWidth="3.5"
+        android:strokeLineCap="round"
+        android:fillColor="#00000000"
+        android:pathData="M54,40 C58,34 66,34 70,40" />
+    <!-- Gentle Sleeping Smile -->
+    <path
+        android:strokeColor="#0B1220"
+        android:strokeWidth="3"
+        android:strokeLineCap="round"
+        android:fillColor="#00000000"
+        android:pathData="M44,58 C48,62 56,62 60,58" />
+</vector>

@@ -16,6 +16,101 @@ object WidgetRegistry {
 
     val definitions: List<WidgetDefinition> = listOf(
         // ==========================================
+        // SHEER & OUTLINE KWGT SIGNATURE WIDGETS
+        // ==========================================
+        WidgetDefinition(
+            id = "sheer_duotone_music",
+            name = "Sheer: Duotone Music Player",
+            description = "Ed Sheeran Shape of You style duotone silhouette player with progress and controls.",
+            category = WidgetCategory.MUSIC,
+            defaultSize = WidgetSizePreset.MEDIUM_4X2,
+            supportedSizes = listOf(WidgetSizePreset.MEDIUM_4X2, WidgetSizePreset.LARGE_4X3),
+            defaultTheme = WidgetThemePreset.SHEER_MIDNIGHT,
+            capabilities = setOf(WidgetCapability.MEDIA_PLAYBACK_CONTROL, WidgetCapability.INTERACTIVE_CLICKS),
+            requiredPermission = WidgetPermissionRequirement.MEDIA_SESSION,
+            status = WidgetStatus.VERIFIED,
+            providerClassName = "com.personallife.app.widget.SheerMusicWidgetProvider"
+        ),
+        WidgetDefinition(
+            id = "sheer_sleeping_clock",
+            name = "Sheer: Sleeping Moon Clock",
+            description = "Signature deep navy card with bold digital time, date, and cute sleeping face.",
+            category = WidgetCategory.CLOCK,
+            defaultSize = WidgetSizePreset.MEDIUM_4X2,
+            supportedSizes = listOf(WidgetSizePreset.MEDIUM_4X2, WidgetSizePreset.WIDE_4X1),
+            defaultTheme = WidgetThemePreset.SHEER_MIDNIGHT,
+            capabilities = setOf(WidgetCapability.REALTIME_CLOCK, WidgetCapability.INTERACTIVE_CLICKS),
+            requiredPermission = WidgetPermissionRequirement.NONE,
+            status = WidgetStatus.VERIFIED,
+            providerClassName = "com.personallife.app.widget.SleepingClockWidgetProvider"
+        ),
+        WidgetDefinition(
+            id = "sheer_capsule_clock",
+            name = "Sheer: Vertical Capsule Clock",
+            description = "Futuristic vertical stadium capsule with stacked dual numbers.",
+            category = WidgetCategory.CLOCK,
+            defaultSize = WidgetSizePreset.COMPACT_2X1,
+            supportedSizes = listOf(WidgetSizePreset.COMPACT_2X1, WidgetSizePreset.SQUARE_2X2),
+            defaultTheme = WidgetThemePreset.SHEER_MIDNIGHT,
+            capabilities = setOf(WidgetCapability.REALTIME_CLOCK, WidgetCapability.INTERACTIVE_CLICKS),
+            requiredPermission = WidgetPermissionRequirement.NONE,
+            status = WidgetStatus.VERIFIED,
+            providerClassName = "com.personallife.app.widget.VerticalCapsuleClockWidgetProvider"
+        ),
+        WidgetDefinition(
+            id = "sheer_dotted_battery",
+            name = "Sheer: Dotted Matrix Battery",
+            description = "Dotted matrix battery card with live discharging percent and cornflower corner accent.",
+            category = WidgetCategory.BATTERY,
+            defaultSize = WidgetSizePreset.SQUARE_2X2,
+            supportedSizes = listOf(WidgetSizePreset.SQUARE_2X2, WidgetSizePreset.MEDIUM_4X2),
+            defaultTheme = WidgetThemePreset.SHEER_MIDNIGHT,
+            capabilities = setOf(WidgetCapability.BATTERY_MONITORING, WidgetCapability.INTERACTIVE_CLICKS),
+            requiredPermission = WidgetPermissionRequirement.NONE,
+            status = WidgetStatus.VERIFIED,
+            providerClassName = "com.personallife.app.widget.DottedBatteryWidgetProvider"
+        ),
+        WidgetDefinition(
+            id = "sheer_storage_capsule",
+            name = "Sheer: Storage Meter Capsule",
+            description = "Stadium capsule showing live internal disk usage (e.g. 128.4 / 256 GB).",
+            category = WidgetCategory.SYSTEM_INFO,
+            defaultSize = WidgetSizePreset.WIDE_4X1,
+            supportedSizes = listOf(WidgetSizePreset.WIDE_4X1, WidgetSizePreset.MEDIUM_4X2),
+            defaultTheme = WidgetThemePreset.SHEER_MIDNIGHT,
+            capabilities = setOf(WidgetCapability.INTERACTIVE_CLICKS),
+            requiredPermission = WidgetPermissionRequirement.NONE,
+            status = WidgetStatus.VERIFIED,
+            providerClassName = "com.personallife.app.widget.StorageCapsuleWidgetProvider"
+        ),
+        WidgetDefinition(
+            id = "sheer_minimal_calendar",
+            name = "Sheer: Minimalist Calendar",
+            description = "Compact monthly calendar card with today's highlighted date badge.",
+            category = WidgetCategory.CALENDAR,
+            defaultSize = WidgetSizePreset.SQUARE_2X2,
+            supportedSizes = listOf(WidgetSizePreset.SQUARE_2X2, WidgetSizePreset.MEDIUM_4X2),
+            defaultTheme = WidgetThemePreset.SHEER_MIDNIGHT,
+            capabilities = setOf(WidgetCapability.INTERACTIVE_CLICKS),
+            requiredPermission = WidgetPermissionRequirement.NONE,
+            status = WidgetStatus.VERIFIED,
+            providerClassName = "com.personallife.app.widget.MiniCalendarWidgetProvider"
+        ),
+        WidgetDefinition(
+            id = "sheer_outline_tall_clock",
+            name = "Sheer: Tall Outline Clock",
+            description = "Signature stretched tall outlined numerals with top-right cornflower date badge.",
+            category = WidgetCategory.CLOCK,
+            defaultSize = WidgetSizePreset.SQUARE_2X2,
+            supportedSizes = listOf(WidgetSizePreset.SQUARE_2X2, WidgetSizePreset.MEDIUM_4X2),
+            defaultTheme = WidgetThemePreset.SHEER_MIDNIGHT,
+            capabilities = setOf(WidgetCapability.REALTIME_CLOCK, WidgetCapability.INTERACTIVE_CLICKS),
+            requiredPermission = WidgetPermissionRequirement.NONE,
+            status = WidgetStatus.VERIFIED,
+            providerClassName = "com.personallife.app.widget.TallOutlineClockWidgetProvider"
+        ),
+
+        // ==========================================
         // OS ECOSYSTEMS: GOOGLE PIXEL, NOTHING OS & SAMSUNG ONE UI
         // ==========================================
         WidgetDefinition(

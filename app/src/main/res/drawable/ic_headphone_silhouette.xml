@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Head Profile Silhouette -->
+    <path
+        android:fillColor="#0B1220"
+        android:pathData="M20,72 C22,64 26,58 32,54 C34,50 34,44 32,38 C30,32 32,24 38,18 C46,10 60,12 68,20 C74,26 76,34 74,44 C76,46 77,50 76,54 C74,58 70,62 66,66 C68,72 72,78 78,84 L18,84 C19,80 19.5,76 20,72 Z" />
+    <!-- Over-Ear Headphone Headband -->
+    <path
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="5"
+        android:strokeLineCap="round"
+        android:fillColor="#00000000"
+        android:pathData="M38,40 C36,24 56,16 68,28 C74,34 74,42 74,46" />
+    <!-- Over-Ear Headphone Cup -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M52,36 C52,30 58,26 64,26 C70,26 76,30 76,36 L76,52 C76,58 70,62 64,62 C58,62 52,58 52,52 Z" />
+</vector>
