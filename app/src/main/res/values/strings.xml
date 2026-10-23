@@ -19,12 +19,6 @@
     <string name="widget_music_label">Viyora: Music Controller</string>
     <string name="widget_music_desc">Compact media player and track controls</string>
 
-    <!-- Google Pixel Widgets -->
-    <string name="widget_pixel_glance_label">Pixel: At a Glance</string>
-    <string name="widget_pixel_glance_desc">Live date and battery pill in Material You pill layout</string>
-    <string name="widget_pixel_clock_label">Pixel: Scalloped Clock</string>
-    <string name="widget_pixel_clock_desc">Material You 12-lobed petal clock with real-time system stats</string>
-
     <!-- Nothing OS Widgets -->
     <string name="widget_nothing_clock_label">Nothing: NDot Digital Clock</string>
     <string name="widget_nothing_clock_desc">Stark monochrome dot-matrix clock with signature red accent dot</string>
@@ -79,4 +73,22 @@
     <string name="widget_system_card_label">Viyora: Device &amp; Storage</string>
     <string name="widget_timetable_label">Viyora: Study Timetable</string>
     <string name="widget_decision_label">Viyora: Decision Helper</string>
+
+    <!-- Google Pixel Official Widget Strings -->
+    <string name="widget_pixel_glance_label">Pixel: At a Glance</string>
+    <string name="widget_pixel_glance_desc">Live date, weather condition, temperature and upcoming agenda</string>
+    <string name="widget_pixel_clock_label">Pixel: Material You Flower Clock</string>
+    <string name="widget_pixel_clock_desc">Iconic 4-petal scalloped clover analog clock with rotating hands</string>
+    <string name="widget_pixel_stacked_label">Pixel: Stacked Digital Clock</string>
+    <string name="widget_pixel_stacked_desc">Bold stacked digits with Material You date pill</string>
+    <string name="widget_pixel_search_label">Pixel: Google Search Bar</string>
+    <string name="widget_pixel_search_desc">Authentic Google Search pill with Voice Search and Google Lens</string>
+    <string name="widget_pixel_battery_label">Pixel: Material You Battery Card</string>
+    <string name="widget_pixel_battery_desc">Phone battery meter with charging status and accessories</string>
+    <string name="widget_pixel_weather_label">Pixel: Diagonal Weather Pill</string>
+    <string name="widget_pixel_weather_desc">Two-tone split pill showing weather illustration, temp and high/low</string>
+    <string name="widget_pixel_keep_label">Pixel: Keep Quick Capture</string>
+    <string name="widget_pixel_keep_desc">Quick note, checklist, voice memo and camera capture bar</string>
+    <string name="widget_pixel_turntable_label">Pixel: YouTube Music Turntable</string>
+    <string name="widget_pixel_turntable_desc">Rotating vinyl record with album art and playback controls</string>
 </resources>

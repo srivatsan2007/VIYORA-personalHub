@@ -10,7 +10,7 @@
     android:minResizeWidth="110dp"
     android:minResizeHeight="110dp"
     android:updatePeriodMillis="1800000"
-    android:initialLayout="@layout/widget_pixel_clock"
+    android:initialLayout="@layout/widget_pixel_flower_clock"
     android:widgetCategory="home_screen"
     android:description="@string/widget_pixel_clock_desc">
 </appwidget-provider>

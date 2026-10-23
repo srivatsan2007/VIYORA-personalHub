@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widget_pixel_stacked_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/widget_pixel_card_bg"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Stacked Hours & Minutes -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextClock
+            android:id="@+id/widget_pixel_stacked_hours"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-black"
+            android:format12Hour="hh"
+            android:format24Hour="HH"
+            android:includeFontPadding="false"
+            android:lineSpacingExtra="0dp"
+            android:textColor="#D2E7D6"
+            android:textSize="52sp" />
+
+        <TextClock
+            android:id="@+id/widget_pixel_stacked_minutes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-10dp"
+            android:fontFamily="sans-serif-black"
+            android:format12Hour="mm"
+            android:format24Hour="mm"
+            android:includeFontPadding="false"
+            android:lineSpacingExtra="0dp"
+            android:textColor="#D2E7D6"
+            android:textSize="52sp" />
+    </LinearLayout>
+
+    <!-- Material You Date Pill -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/widget_pixel_sage_bg"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingStart="12dp"
+        android:paddingTop="4dp"
+        android:paddingEnd="12dp"
+        android:paddingBottom="4dp">
+
+        <TextView
+            android:id="@+id/widget_pixel_stacked_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:text="TUE, OCT 24"
+            android:textColor="#1B3728"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+</LinearLayout>

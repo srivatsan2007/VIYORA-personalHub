@@ -1,0 +1,20 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="200dp"
+    android:viewportWidth="200"
+    android:viewportHeight="200">
+    <!-- Hour Hand pointing to 12 o'clock with pivot at (100, 100) -->
+    <path
+        android:fillColor="#1B3728"
+        android:pathData="M 94,100
+            L 94,52
+            A 6,6 0 0 1 106,52
+            L 106,100
+            A 6,6 0 0 1 94,100 Z" />
+    <!-- Center pivot cap -->
+    <path
+        android:fillColor="#1B3728"
+        android:pathData="M 100,94
+            A 6,6 0 1 1 100,106
+            A 6,6 0 1 1 100,94 Z" />
+</vector>

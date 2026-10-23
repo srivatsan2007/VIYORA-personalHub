@@ -1108,34 +1108,234 @@ private fun EcosystemPreviewContent(
 
     when (definition.id) {
         "pixel_at_a_glance" -> {
-            Row(
-                modifier = Modifier.fillMaxWidth().padding(horizontal = 4.dp, vertical = 2.dp),
-                verticalAlignment = Alignment.CenterVertically,
-                horizontalArrangement = Arrangement.SpaceBetween
+            Column(
+                modifier = Modifier.fillMaxWidth().padding(horizontal = 8.dp, vertical = 4.dp),
+                verticalArrangement = Arrangement.Center
             ) {
-                Column(modifier = Modifier.weight(1f)) {
-                    Text(text = currentDate, color = textColor, fontSize = 16.sp, fontWeight = FontWeight.Bold)
-                    Text(text = "At a Glance • Viyora", color = accentColor, fontSize = 12.sp)
-                }
-                Box(
-                    modifier = Modifier
-                        .clip(RoundedCornerShape(16.dp))
-                        .background(accentColor.copy(alpha = 0.2f))
-                        .padding(horizontal = 12.dp, vertical = 6.dp)
-                ) {
-                    Text(text = "⚡ 64%", color = accentColor, fontSize = 13.sp, fontWeight = FontWeight.Bold)
+                Text(
+                    text = currentDate,
+                    color = Color.White,
+                    fontSize = 18.sp,
+                    fontWeight = FontWeight.SemiBold
+                )
+                Spacer(modifier = Modifier.height(4.dp))
+                Row(verticalAlignment = Alignment.CenterVertically) {
+                    Text(text = "☀️", fontSize = 14.sp)
+                    Spacer(modifier = Modifier.width(6.dp))
+                    Text(text = "24°C", color = Color(0xFFF1F3F4), fontSize = 14.sp, fontWeight = FontWeight.Medium)
+                    Spacer(modifier = Modifier.width(8.dp))
+                    Text(text = "•", color = Color(0xFFBDC1C6), fontSize = 14.sp)
+                    Spacer(modifier = Modifier.width(8.dp))
+                    Text(text = "10:00 AM Design Catchup", color = Color(0xFFE8EAED), fontSize = 13.sp)
                 }
             }
         }
         "pixel_scalloped_clock" -> {
+            Box(
+                modifier = Modifier.fillMaxWidth().height(140.dp),
+                contentAlignment = Alignment.Center
+            ) {
+                Canvas(modifier = Modifier.size(130.dp)) {
+                    val w = size.width
+                    val h = size.height
+                    val path = androidx.compose.ui.graphics.Path().apply {
+                        addOval(androidx.compose.ui.geometry.Rect(w * 0.22f, 0f, w * 0.78f, h * 0.56f))
+                        addOval(androidx.compose.ui.geometry.Rect(w * 0.44f, h * 0.22f, w, h * 0.78f))
+                        addOval(androidx.compose.ui.geometry.Rect(w * 0.22f, h * 0.44f, w * 0.78f, h))
+                        addOval(androidx.compose.ui.geometry.Rect(0f, h * 0.22f, w * 0.56f, h * 0.78f))
+                    }
+                    drawPath(path = path, color = Color(0xFFD2E7D6))
+
+                    val cx = w / 2f
+                    val cy = h / 2f
+                    drawLine(
+                        color = Color(0xFF1B3728),
+                        start = Offset(cx, cy),
+                        end = Offset(cx - 24f, cy - 20f),
+                        strokeWidth = 10f,
+                        cap = StrokeCap.Round
+                    )
+                    drawLine(
+                        color = Color(0xFF1B3728),
+                        start = Offset(cx, cy),
+                        end = Offset(cx + 36f, cy - 28f),
+                        strokeWidth = 7f,
+                        cap = StrokeCap.Round
+                    )
+                    drawCircle(color = Color(0xFF1B3728), radius = 6f, center = Offset(cx, cy))
+                }
+            }
+        }
+        "pixel_stacked_clock" -> {
             Column(
                 modifier = Modifier.fillMaxWidth().padding(8.dp),
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
-                Text(text = currentTime, color = textColor, fontSize = 34.sp, fontWeight = FontWeight.Black)
-                Text(text = currentDate.uppercase(), color = accentColor, fontSize = 12.sp, fontWeight = FontWeight.Medium)
-                Spacer(modifier = Modifier.height(4.dp))
-                Text(text = "● 64% Battery • Charging", color = subtextColor, fontSize = 11.sp)
+                Text(
+                    text = "09",
+                    color = Color(0xFFD2E7D6),
+                    fontSize = 44.sp,
+                    fontWeight = FontWeight.Black,
+                    lineHeight = 44.sp
+                )
+                Text(
+                    text = "26",
+                    color = Color(0xFFD2E7D6),
+                    fontSize = 44.sp,
+                    fontWeight = FontWeight.Black,
+                    lineHeight = 44.sp
+                )
+                Spacer(modifier = Modifier.height(6.dp))
+                Box(
+                    modifier = Modifier
+                        .clip(RoundedCornerShape(12.dp))
+                        .background(Color(0xFFD2E7D6))
+                        .padding(horizontal = 10.dp, vertical = 3.dp)
+                ) {
+                    Text(
+                        text = "TUE, OCT 24",
+                        color = Color(0xFF1B3728),
+                        fontSize = 11.sp,
+                        fontWeight = FontWeight.Bold
+                    )
+                }
+            }
+        }
+        "pixel_battery_status" -> {
+            Column(
+                modifier = Modifier.fillMaxWidth().padding(horizontal = 8.dp, vertical = 6.dp)
+            ) {
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    Text(text = "📱", fontSize = 16.sp)
+                    Spacer(modifier = Modifier.width(10.dp))
+                    Column(modifier = Modifier.weight(1f)) {
+                        Text(text = "Pixel Phone", color = Color.White, fontSize = 13.sp, fontWeight = FontWeight.Medium)
+                        Spacer(modifier = Modifier.height(4.dp))
+                        LinearProgressIndicator(
+                            progress = { 0.64f },
+                            modifier = Modifier.fillMaxWidth().height(6.dp).clip(RoundedCornerShape(3.dp)),
+                            color = Color(0xFFD2E7D6),
+                            trackColor = Color(0xFF333834)
+                        )
+                    }
+                    Spacer(modifier = Modifier.width(12.dp))
+                    Text(text = "64%", color = Color(0xFFD2E7D6), fontSize = 16.sp, fontWeight = FontWeight.Black)
+                }
+                Spacer(modifier = Modifier.height(10.dp))
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    Text(text = "🎧", fontSize = 16.sp)
+                    Spacer(modifier = Modifier.width(10.dp))
+                    Column(modifier = Modifier.weight(1f)) {
+                        Text(text = "Pixel Buds Pro", color = Color(0xFFE8EAED), fontSize = 13.sp, fontWeight = FontWeight.Medium)
+                        Spacer(modifier = Modifier.height(4.dp))
+                        LinearProgressIndicator(
+                            progress = { 0.85f },
+                            modifier = Modifier.fillMaxWidth().height(6.dp).clip(RoundedCornerShape(3.dp)),
+                            color = Color(0xFFE8DEF8),
+                            trackColor = Color(0xFF333834)
+                        )
+                    }
+                    Spacer(modifier = Modifier.width(12.dp))
+                    Text(text = "85%", color = Color(0xFFE8DEF8), fontSize = 16.sp, fontWeight = FontWeight.Black)
+                }
+            }
+        }
+        "pixel_search_bar" -> {
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .clip(RoundedCornerShape(24.dp))
+                    .background(Color(0xFF303030))
+                    .padding(horizontal = 14.dp, vertical = 10.dp),
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                Text(text = "G", color = Color(0xFF4285F4), fontSize = 18.sp, fontWeight = FontWeight.Black)
+                Spacer(modifier = Modifier.width(12.dp))
+                Text(
+                    text = "Search...",
+                    color = Color(0xFFBDC1C6),
+                    fontSize = 14.sp,
+                    modifier = Modifier.weight(1f)
+                )
+                Text(text = "🎙", fontSize = 17.sp)
+                Spacer(modifier = Modifier.width(10.dp))
+                Text(text = "📷", fontSize = 17.sp)
+            }
+        }
+        "pixel_diagonal_weather" -> {
+            Column(
+                modifier = Modifier.fillMaxWidth().clip(RoundedCornerShape(20.dp)).background(Color(0xFF232826))
+            ) {
+                Row(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .background(Color(0xFFD2E7D6))
+                        .padding(horizontal = 14.dp, vertical = 10.dp),
+                    verticalAlignment = Alignment.CenterVertically,
+                    horizontalArrangement = Arrangement.Center
+                ) {
+                    Text(text = "☀️", fontSize = 28.sp)
+                    Spacer(modifier = Modifier.width(12.dp))
+                    Text(text = "24°", color = Color(0xFF1B3728), fontSize = 32.sp, fontWeight = FontWeight.Black)
+                }
+                Column(
+                    modifier = Modifier.fillMaxWidth().padding(horizontal = 12.dp, vertical = 8.dp),
+                    horizontalAlignment = Alignment.CenterHorizontally
+                ) {
+                    Text(text = "Mostly Sunny", color = Color.White, fontSize = 13.sp, fontWeight = FontWeight.Medium)
+                    Text(text = "H: 28° • L: 19°", color = Color(0xFFA2B4A6), fontSize = 11.sp)
+                }
+            }
+        }
+        "pixel_keep_capture" -> {
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .clip(RoundedCornerShape(24.dp))
+                    .background(Color(0xFF303030))
+                    .padding(horizontal = 14.dp, vertical = 8.dp),
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                Text(text = "💡", fontSize = 18.sp)
+                Spacer(modifier = Modifier.width(10.dp))
+                Text(text = "Take a note...", color = Color(0xFFBDC1C6), fontSize = 13.sp, modifier = Modifier.weight(1f))
+                Text(text = "☑", color = Color(0xFFFBBC04), fontSize = 18.sp)
+                Spacer(modifier = Modifier.width(12.dp))
+                Text(text = "🎙", fontSize = 18.sp)
+                Spacer(modifier = Modifier.width(12.dp))
+                Text(text = "📷", fontSize = 18.sp)
+            }
+        }
+        "pixel_turntable_music" -> {
+            Box(
+                modifier = Modifier.fillMaxWidth().height(120.dp),
+                contentAlignment = Alignment.Center
+            ) {
+                Canvas(modifier = Modifier.size(110.dp)) {
+                    val cx = size.width / 2f
+                    val cy = size.height / 2f
+                    drawCircle(color = Color(0xFF121212), radius = 55.dp.toPx(), center = Offset(cx, cy))
+                    drawCircle(color = Color(0xFF262626), radius = 45.dp.toPx(), center = Offset(cx, cy), style = Stroke(width = 1.5f))
+                    drawCircle(color = Color(0xFF202020), radius = 35.dp.toPx(), center = Offset(cx, cy), style = Stroke(width = 1.5f))
+                    drawCircle(color = Color(0xFF262626), radius = 25.dp.toPx(), center = Offset(cx, cy), style = Stroke(width = 1.5f))
+                    drawCircle(color = Color(0xFFFF0000), radius = 18.dp.toPx(), center = Offset(cx, cy))
+                    drawCircle(color = Color.Black, radius = 4.dp.toPx(), center = Offset(cx, cy))
+                }
+                Box(
+                    modifier = Modifier
+                        .size(32.dp)
+                        .clip(CircleShape)
+                        .background(Color.White.copy(alpha = 0.9f)),
+                    contentAlignment = Alignment.Center
+                ) {
+                    Text(text = "▶", color = Color.Black, fontSize = 14.sp)
+                }
             }
         }
         "nothing_dot_clock" -> {

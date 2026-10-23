@@ -154,6 +154,82 @@
                 android:resource="@xml/widget_pixel_clock_info" />
         </receiver>
 
+        <receiver
+            android:name=".widget.PixelStackedClockWidgetProvider"
+            android:exported="true"
+            android:label="@string/widget_pixel_stacked_label">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_pixel_stacked_clock_info" />
+        </receiver>
+
+        <receiver
+            android:name=".widget.PixelSearchBarWidgetProvider"
+            android:exported="true"
+            android:label="@string/widget_pixel_search_label">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_pixel_search_bar_info" />
+        </receiver>
+
+        <receiver
+            android:name=".widget.PixelBatteryWidgetProvider"
+            android:exported="true"
+            android:label="@string/widget_pixel_battery_label">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+                <action android:name="android.intent.action.BATTERY_CHANGED" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_pixel_battery_info" />
+        </receiver>
+
+        <receiver
+            android:name=".widget.PixelWeatherPillWidgetProvider"
+            android:exported="true"
+            android:label="@string/widget_pixel_weather_label">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_pixel_weather_diagonal_info" />
+        </receiver>
+
+        <receiver
+            android:name=".widget.PixelKeepCaptureWidgetProvider"
+            android:exported="true"
+            android:label="@string/widget_pixel_keep_label">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_pixel_keep_capture_info" />
+        </receiver>
+
+        <receiver
+            android:name=".widget.PixelTurntableMusicWidgetProvider"
+            android:exported="true"
+            android:label="@string/widget_pixel_turntable_label">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_pixel_turntable_music_info" />
+        </receiver>
+
         <!-- Nothing OS Widgets -->
         <receiver
             android:name=".widget.NothingClockWidgetProvider"

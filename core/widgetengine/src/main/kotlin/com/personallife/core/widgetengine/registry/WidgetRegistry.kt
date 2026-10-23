@@ -813,6 +813,114 @@ object WidgetRegistry {
             requiredPermission = WidgetPermissionRequirement.NONE,
             status = WidgetStatus.VERIFIED,
             providerClassName = "com.personallife.app.widget.DecisionHelperWidgetProvider"
+        ),
+
+        // ==========================================
+        // OFFICIAL GOOGLE PIXEL (MATERIAL YOU) SUITE
+        // ==========================================
+        WidgetDefinition(
+            id = "pixel_at_a_glance",
+            name = "Pixel: At a Glance",
+            description = "Official Pixel smart header showing live date, weather condition, temperature and upcoming agenda.",
+            category = WidgetCategory.ECOSYSTEM,
+            defaultSize = WidgetSizePreset.WIDE_4X1,
+            supportedSizes = listOf(WidgetSizePreset.WIDE_4X1, WidgetSizePreset.MEDIUM_4X2),
+            defaultTheme = WidgetThemePreset.PIXEL_MATERIAL_YOU,
+            capabilities = setOf(WidgetCapability.REALTIME_CLOCK, WidgetCapability.INTERACTIVE_CLICKS),
+            requiredPermission = WidgetPermissionRequirement.NONE,
+            status = WidgetStatus.VERIFIED,
+            providerClassName = "com.personallife.app.widget.PixelAtAGlanceWidgetProvider"
+        ),
+        WidgetDefinition(
+            id = "pixel_scalloped_clock",
+            name = "Pixel: Material You Flower Clock",
+            description = "Iconic 4-petal scalloped clover analog clock with rotating pill hands and Material You styling.",
+            category = WidgetCategory.ECOSYSTEM,
+            defaultSize = WidgetSizePreset.SQUARE_2X2,
+            supportedSizes = listOf(WidgetSizePreset.SQUARE_2X2),
+            defaultTheme = WidgetThemePreset.PIXEL_MATERIAL_YOU,
+            capabilities = setOf(WidgetCapability.REALTIME_CLOCK, WidgetCapability.INTERACTIVE_CLICKS),
+            requiredPermission = WidgetPermissionRequirement.NONE,
+            status = WidgetStatus.VERIFIED,
+            providerClassName = "com.personallife.app.widget.PixelClockWidgetProvider"
+        ),
+        WidgetDefinition(
+            id = "pixel_stacked_clock",
+            name = "Pixel: Stacked Digital Clock",
+            description = "Giant stacked hour and minute digits with Material You squircle card and date pill.",
+            category = WidgetCategory.ECOSYSTEM,
+            defaultSize = WidgetSizePreset.SQUARE_2X2,
+            supportedSizes = listOf(WidgetSizePreset.SQUARE_2X2, WidgetSizePreset.MEDIUM_4X2),
+            defaultTheme = WidgetThemePreset.PIXEL_MATERIAL_YOU,
+            capabilities = setOf(WidgetCapability.REALTIME_CLOCK, WidgetCapability.INTERACTIVE_CLICKS),
+            requiredPermission = WidgetPermissionRequirement.NONE,
+            status = WidgetStatus.VERIFIED,
+            providerClassName = "com.personallife.app.widget.PixelStackedClockWidgetProvider"
+        ),
+        WidgetDefinition(
+            id = "pixel_battery_status",
+            name = "Pixel: Material You Battery Card",
+            description = "Official Pixel battery widget showing live phone power %, charging indicator, and accessories.",
+            category = WidgetCategory.ECOSYSTEM,
+            defaultSize = WidgetSizePreset.MEDIUM_4X2,
+            supportedSizes = listOf(WidgetSizePreset.MEDIUM_4X2, WidgetSizePreset.LARGE_4X3),
+            defaultTheme = WidgetThemePreset.PIXEL_MATERIAL_YOU,
+            capabilities = setOf(WidgetCapability.BATTERY_MONITORING, WidgetCapability.INTERACTIVE_CLICKS),
+            requiredPermission = WidgetPermissionRequirement.NONE,
+            status = WidgetStatus.VERIFIED,
+            providerClassName = "com.personallife.app.widget.PixelBatteryWidgetProvider"
+        ),
+        WidgetDefinition(
+            id = "pixel_search_bar",
+            name = "Pixel: Google Search Bar",
+            description = "Authentic Google Search pill featuring 4-color Google G, Voice Search mic, and Google Lens shortcuts.",
+            category = WidgetCategory.ECOSYSTEM,
+            defaultSize = WidgetSizePreset.WIDE_4X1,
+            supportedSizes = listOf(WidgetSizePreset.WIDE_4X1, WidgetSizePreset.MEDIUM_4X2),
+            defaultTheme = WidgetThemePreset.PIXEL_MATERIAL_YOU,
+            capabilities = setOf(WidgetCapability.INTERACTIVE_CLICKS),
+            requiredPermission = WidgetPermissionRequirement.NONE,
+            status = WidgetStatus.VERIFIED,
+            providerClassName = "com.personallife.app.widget.PixelSearchBarWidgetProvider"
+        ),
+        WidgetDefinition(
+            id = "pixel_diagonal_weather",
+            name = "Pixel: Diagonal Weather Pill",
+            description = "Signature two-tone split pill showing weather illustration, bold temp, and high/low forecast.",
+            category = WidgetCategory.ECOSYSTEM,
+            defaultSize = WidgetSizePreset.MEDIUM_4X2,
+            supportedSizes = listOf(WidgetSizePreset.MEDIUM_4X2),
+            defaultTheme = WidgetThemePreset.PIXEL_MATERIAL_YOU,
+            capabilities = setOf(WidgetCapability.INTERACTIVE_CLICKS),
+            requiredPermission = WidgetPermissionRequirement.NONE,
+            status = WidgetStatus.VERIFIED,
+            providerClassName = "com.personallife.app.widget.PixelWeatherPillWidgetProvider"
+        ),
+        WidgetDefinition(
+            id = "pixel_keep_capture",
+            name = "Pixel: Keep Notes Quick Capture",
+            description = "Instant capture bar with Google Keep icon, text note, checklist, voice memo, and camera shortcuts.",
+            category = WidgetCategory.ECOSYSTEM,
+            defaultSize = WidgetSizePreset.WIDE_4X1,
+            supportedSizes = listOf(WidgetSizePreset.WIDE_4X1),
+            defaultTheme = WidgetThemePreset.PIXEL_MATERIAL_YOU,
+            capabilities = setOf(WidgetCapability.INTERACTIVE_CLICKS),
+            requiredPermission = WidgetPermissionRequirement.NONE,
+            status = WidgetStatus.VERIFIED,
+            providerClassName = "com.personallife.app.widget.PixelKeepCaptureWidgetProvider"
+        ),
+        WidgetDefinition(
+            id = "pixel_turntable_music",
+            name = "Pixel: YouTube Music Turntable",
+            description = "Authentic YouTube Music rotating vinyl disc widget with center album art and playback controls.",
+            category = WidgetCategory.ECOSYSTEM,
+            defaultSize = WidgetSizePreset.SQUARE_2X2,
+            supportedSizes = listOf(WidgetSizePreset.SQUARE_2X2),
+            defaultTheme = WidgetThemePreset.PIXEL_MATERIAL_YOU,
+            capabilities = setOf(WidgetCapability.MEDIA_PLAYBACK_CONTROL, WidgetCapability.INTERACTIVE_CLICKS),
+            requiredPermission = WidgetPermissionRequirement.NONE,
+            status = WidgetStatus.VERIFIED,
+            providerClassName = "com.personallife.app.widget.PixelTurntableMusicWidgetProvider"
         )
     )
 

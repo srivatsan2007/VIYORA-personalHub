@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widget_pixel_keep_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/widget_pixel_search_bg"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingStart="16dp"
+    android:paddingTop="8dp"
+    android:paddingEnd="16dp"
+    android:paddingBottom="8dp">
+
+    <!-- Keep Icon -->
+    <ImageView
+        android:id="@+id/widget_pixel_keep_icon"
+        android:layout_width="26dp"
+        android:layout_height="26dp"
+        android:clickable="true"
+        android:contentDescription="Google Keep"
+        android:focusable="true"
+        android:src="@drawable/ic_pixel_keep" />
+
+    <TextView
+        android:id="@+id/widget_pixel_keep_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_weight="1"
+        android:clickable="true"
+        android:focusable="true"
+        android:fontFamily="sans-serif-medium"
+        android:text="Take a note..."
+        android:textColor="#BDC1C6"
+        android:textSize="14sp" />
+
+    <!-- List Note Shortcut -->
+    <TextView
+        android:id="@+id/widget_pixel_keep_list"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center"
+        android:text="☑"
+        android:textColor="#FBBC04"
+        android:textSize="18sp" />
+
+    <!-- Mic Voice Note Shortcut -->
+    <TextView
+        android:id="@+id/widget_pixel_keep_mic"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="6dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center"
+        android:text="🎙"
+        android:textSize="18sp" />
+
+    <!-- Camera Note Shortcut -->
+    <TextView
+        android:id="@+id/widget_pixel_keep_photo"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="6dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center"
+        android:text="📷"
+        android:textSize="18sp" />
+
+</LinearLayout>

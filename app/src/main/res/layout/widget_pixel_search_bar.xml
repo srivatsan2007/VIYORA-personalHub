@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widget_pixel_search_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/widget_pixel_search_bg"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingStart="16dp"
+    android:paddingTop="8dp"
+    android:paddingEnd="16dp"
+    android:paddingBottom="8dp">
+
+    <!-- 4-Color Google 'G' -->
+    <ImageView
+        android:id="@+id/widget_pixel_search_g"
+        android:layout_width="26dp"
+        android:layout_height="26dp"
+        android:contentDescription="Google"
+        android:src="@drawable/ic_google_g" />
+
+    <!-- Search Text Box -->
+    <TextView
+        android:id="@+id/widget_pixel_search_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:layout_marginEnd="10dp"
+        android:layout_weight="1"
+        android:fontFamily="sans-serif"
+        android:text="Search..."
+        android:textColor="#BDC1C6"
+        android:textSize="15sp" />
+
+    <!-- Google Voice Search Mic -->
+    <ImageView
+        android:id="@+id/widget_pixel_search_mic"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_marginEnd="8dp"
+        android:clickable="true"
+        android:contentDescription="Voice Search"
+        android:focusable="true"
+        android:padding="3dp"
+        android:src="@drawable/ic_google_mic" />
+
+    <!-- Google Lens Camera -->
+    <ImageView
+        android:id="@+id/widget_pixel_search_lens"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:clickable="true"
+        android:contentDescription="Google Lens"
+        android:focusable="true"
+        android:padding="3dp"
+        android:src="@drawable/ic_google_lens" />
+
+</LinearLayout>

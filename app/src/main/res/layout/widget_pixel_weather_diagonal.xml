@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widget_pixel_weather_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/widget_pixel_card_bg"
+    android:clickable="true"
+    android:focusable="true"
+    android:orientation="vertical">
+
+    <!-- Top Segment (Pastel Highlight) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.1"
+        android:background="@drawable/widget_pixel_sage_bg"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="12dp">
+
+        <ImageView
+            android:id="@+id/widget_pixel_weather_icon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:contentDescription="Weather Condition"
+            android:src="@drawable/ic_pixel_weather_sun" />
+
+        <TextView
+            android:id="@+id/widget_pixel_weather_temp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:fontFamily="sans-serif-black"
+            android:text="24°"
+            android:textColor="#1B3728"
+            android:textSize="38sp" />
+    </LinearLayout>
+
+    <!-- Bottom Segment (Condition & High/Low) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.9"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/widget_pixel_weather_condition"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:text="Mostly Sunny"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/widget_pixel_weather_hilow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:fontFamily="sans-serif"
+            android:text="H: 28° • L: 19°"
+            android:textColor="#A2B4A6"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+</LinearLayout>

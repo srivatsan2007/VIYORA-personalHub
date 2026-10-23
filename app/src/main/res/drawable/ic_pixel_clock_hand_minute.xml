@@ -1,0 +1,14 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="200dp"
+    android:viewportWidth="200"
+    android:viewportHeight="200">
+    <!-- Minute Hand pointing to 12 o'clock with pivot at (100, 100) -->
+    <path
+        android:fillColor="#1B3728"
+        android:pathData="M 96,100
+            L 96,24
+            A 4,4 0 0 1 104,24
+            L 104,100
+            A 4,4 0 0 1 96,100 Z" />
+</vector>
