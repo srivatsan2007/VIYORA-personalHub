@@ -391,6 +391,68 @@ private fun MusicPreviewContent(
         return
     }
 
+    if (definition.id == "sheer_orange_music") {
+        Row(
+            modifier = Modifier.fillMaxWidth(),
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            Column(modifier = Modifier.weight(1.2f)) {
+                Row(horizontalArrangement = Arrangement.spacedBy(6.dp)) {
+                    Box(
+                        modifier = Modifier
+                            .size(36.dp)
+                            .clip(RoundedCornerShape(10.dp))
+                            .background(Color(0xFF181E2C)),
+                        contentAlignment = Alignment.Center
+                    ) {
+                        Text(text = "♫", color = Color.White, fontSize = 16.sp)
+                    }
+                    Box(
+                        modifier = Modifier
+                            .size(36.dp)
+                            .clip(RoundedCornerShape(10.dp))
+                            .background(Color(0xFFFFD600)),
+                        contentAlignment = Alignment.Center
+                    ) {
+                        Text(text = "▶", color = Color.Black, fontSize = 14.sp)
+                    }
+                }
+                Spacer(modifier = Modifier.height(6.dp))
+                Row(horizontalArrangement = Arrangement.spacedBy(6.dp)) {
+                    Box(
+                        modifier = Modifier
+                            .size(36.dp)
+                            .clip(RoundedCornerShape(10.dp))
+                            .background(Color(0xFF181E2C)),
+                        contentAlignment = Alignment.Center
+                    ) {
+                        Text(text = "⏮", color = Color(0xFFCBD5E1), fontSize = 14.sp)
+                    }
+                    Box(
+                        modifier = Modifier
+                            .size(36.dp)
+                            .clip(RoundedCornerShape(10.dp))
+                            .background(Color(0xFF181E2C)),
+                        contentAlignment = Alignment.Center
+                    ) {
+                        Text(text = "⏭", color = Color(0xFFCBD5E1), fontSize = 14.sp)
+                    }
+                }
+            }
+            Spacer(modifier = Modifier.width(10.dp))
+            Box(
+                modifier = Modifier
+                    .size(width = 80.dp, height = 78.dp)
+                    .clip(RoundedCornerShape(18.dp))
+                    .background(Color(0xFFFF6B00)),
+                contentAlignment = Alignment.Center
+            ) {
+                Text(text = "🎧", fontSize = 32.sp)
+            }
+        }
+        return
+    }
+
     Column {
         Row(
             modifier = Modifier.fillMaxWidth(),
@@ -466,6 +528,25 @@ private fun BatteryPreviewContent(
                 Text(text = "discharging", color = Color(0xFF94A3B8), fontSize = 13.sp, fontFamily = FontFamily.Monospace)
                 Text(text = "52%", color = Color.White, fontSize = 36.sp, fontWeight = FontWeight.Black, fontFamily = FontFamily.Monospace)
             }
+        }
+        return
+    }
+
+    if (definition.id == "sheer_dotted_matrix_95") {
+        Column(
+            modifier = Modifier.fillMaxWidth().padding(4.dp),
+            horizontalAlignment = Alignment.CenterHorizontally
+        ) {
+            Text(text = "ENERGY", color = Color(0xFF5C7CFA), fontSize = 11.sp, fontFamily = FontFamily.Monospace, letterSpacing = 2.sp)
+            Text(
+                text = "95",
+                color = Color.White,
+                fontSize = 52.sp,
+                fontWeight = FontWeight.Black,
+                fontFamily = FontFamily.Monospace,
+                letterSpacing = 1.sp
+            )
+            Text(text = "● ACTIVE", color = Color(0xFF94A3B8), fontSize = 10.sp, fontFamily = FontFamily.Monospace)
         }
         return
     }
@@ -552,6 +633,28 @@ private fun WeatherPreviewContent(
     textColor: Color,
     subtextColor: Color
 ) {
+    if (definition.id == "sheer_celestial_dial") {
+        Column(
+            modifier = Modifier.fillMaxWidth().padding(4.dp),
+            horizontalAlignment = Alignment.CenterHorizontally
+        ) {
+            Row(verticalAlignment = Alignment.CenterVertically) {
+                Text(text = "☀️", fontSize = 16.sp)
+                Spacer(modifier = Modifier.width(6.dp))
+                Text(text = "06:14 AM", color = Color(0xFF38BDF8), fontSize = 13.sp, fontWeight = FontWeight.Bold)
+            }
+            Spacer(modifier = Modifier.height(6.dp))
+            Box(modifier = Modifier.fillMaxWidth().height(1.dp).background(Color(0xFF334155)))
+            Spacer(modifier = Modifier.height(6.dp))
+            Row(verticalAlignment = Alignment.CenterVertically) {
+                Text(text = "07:11 PM", color = Color(0xFF94A3B8), fontSize = 13.sp, fontWeight = FontWeight.Bold)
+                Spacer(modifier = Modifier.width(6.dp))
+                Text(text = "🌙", fontSize = 16.sp)
+            }
+        }
+        return
+    }
+
     Row(
         modifier = Modifier.fillMaxWidth(),
         horizontalArrangement = Arrangement.SpaceBetween,
@@ -865,6 +968,62 @@ private fun CalendarPreviewContent(
     textColor: Color,
     subtextColor: Color
 ) {
+    if (definition.id == "sheer_date_capsule") {
+        Row(
+            modifier = Modifier.fillMaxWidth().padding(horizontal = 8.dp, vertical = 2.dp),
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            Box(
+                modifier = Modifier
+                    .size(34.dp)
+                    .clip(CircleShape)
+                    .background(Color.White),
+                contentAlignment = Alignment.Center
+            ) {
+                Text(text = "9", color = Color(0xFF0B1220), fontSize = 18.sp, fontWeight = FontWeight.Black)
+            }
+            Spacer(modifier = Modifier.width(10.dp))
+            Column {
+                Text(text = "SEPT", color = Color.White, fontSize = 12.sp, fontWeight = FontWeight.Black, letterSpacing = 1.sp)
+                Text(text = "Thursday", color = Color(0xFF8E9CAE), fontSize = 11.sp)
+            }
+        }
+        return
+    }
+
+    if (definition.id == "sheer_day_selector") {
+        Column(
+            modifier = Modifier.fillMaxWidth().padding(4.dp),
+            horizontalAlignment = Alignment.CenterHorizontally
+        ) {
+            Text(text = "14", color = Color(0xFF2A3C5E), fontSize = 15.sp, fontFamily = FontFamily.Monospace)
+            Spacer(modifier = Modifier.height(2.dp))
+            Text(text = "> 15 WED <", color = Color.White, fontSize = 18.sp, fontWeight = FontWeight.Bold, fontFamily = FontFamily.Monospace)
+            Spacer(modifier = Modifier.height(2.dp))
+            Text(text = "16", color = Color(0xFF2A3C5E), fontSize = 15.sp, fontFamily = FontFamily.Monospace)
+        }
+        return
+    }
+
+    if (definition.id == "sheer_full_calendar") {
+        Column(
+            modifier = Modifier.fillMaxWidth().padding(4.dp),
+            horizontalAlignment = Alignment.CenterHorizontally
+        ) {
+            Text(text = "OCTOBER 2026", color = Color(0xFF0B1220), fontSize = 13.sp, fontWeight = FontWeight.Black)
+            Spacer(modifier = Modifier.height(2.dp))
+            Text(text = "S  M  T  W  T  F  S", color = Color(0xFF64748B), fontSize = 10.sp, fontFamily = FontFamily.Monospace)
+            Text(
+                text = "       1  2  3\n4  5  6  7  8  9 10\n11 12 13 14 15 16 17\n18 19 20 21 22 [23] 24\n25 26 27 28 29 30 31",
+                color = Color(0xFF1E293B),
+                fontSize = 10.sp,
+                fontFamily = FontFamily.Monospace,
+                lineHeight = 14.sp
+            )
+        }
+        return
+    }
+
     Column(
         modifier = Modifier.fillMaxWidth().padding(4.dp),
         horizontalAlignment = Alignment.CenterHorizontally
@@ -1062,10 +1221,108 @@ private fun GenericPreviewContent(
     textColor: Color,
     subtextColor: Color
 ) {
-    Column {
-        LiquidGlassChip(text = definition.category.title.uppercase(), accentColor = accentColor)
-        Spacer(modifier = Modifier.height(6.dp))
-        Text(text = definition.name, color = textColor, fontSize = 16.sp, fontWeight = FontWeight.Bold)
-        Text(text = definition.description, color = subtextColor, fontSize = 12.sp)
+    when (definition.id) {
+        "sheer_contact_pill" -> {
+            Row(
+                modifier = Modifier.fillMaxWidth().padding(horizontal = 8.dp, vertical = 2.dp),
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                Text(text = "💬", fontSize = 16.sp)
+                Spacer(modifier = Modifier.width(10.dp))
+                Text(text = "SAMIRA", color = Color.White, fontSize = 14.sp, fontWeight = FontWeight.Black, fontFamily = FontFamily.Monospace, letterSpacing = 2.sp)
+            }
+            return
+        }
+        "sheer_dark_toggle" -> {
+            Row(
+                modifier = Modifier.fillMaxWidth().padding(horizontal = 8.dp, vertical = 2.dp),
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                Text(text = "◐", color = Color.White, fontSize = 16.sp)
+                Spacer(modifier = Modifier.width(10.dp))
+                Text(text = "Dark mode", color = Color.White, fontSize = 13.sp, fontWeight = FontWeight.Medium)
+            }
+            return
+        }
+        "sheer_google_search" -> {
+            Row(
+                modifier = Modifier.fillMaxWidth().padding(horizontal = 8.dp, vertical = 2.dp),
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                Text(text = "G", color = Color(0xFF4285F4), fontSize = 18.sp, fontWeight = FontWeight.Black)
+                Spacer(modifier = Modifier.width(10.dp))
+                Text(text = "Search", color = Color(0xFF5F6368), fontSize = 14.sp, fontWeight = FontWeight.Medium)
+            }
+            return
+        }
+        "sheer_bluetooth_toggle" -> {
+            Row(
+                modifier = Modifier.fillMaxWidth().padding(horizontal = 8.dp, vertical = 2.dp),
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                Text(text = "ᛒ", color = Color.White, fontSize = 16.sp, fontWeight = FontWeight.Bold)
+                Spacer(modifier = Modifier.width(10.dp))
+                Text(text = "Bluetooth", color = Color.White, fontSize = 13.sp, fontWeight = FontWeight.Medium)
+            }
+            return
+        }
+        "sheer_sound_toggle" -> {
+            Row(
+                modifier = Modifier.fillMaxWidth().padding(horizontal = 8.dp, vertical = 2.dp),
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                Text(text = "🔊", fontSize = 16.sp)
+                Spacer(modifier = Modifier.width(10.dp))
+                Text(text = "Sound", color = Color.White, fontSize = 13.sp, fontWeight = FontWeight.Medium)
+            }
+            return
+        }
+        "sheer_steps_activity" -> {
+            Row(
+                modifier = Modifier.fillMaxWidth().padding(horizontal = 8.dp, vertical = 2.dp),
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                Box(modifier = Modifier.size(20.dp).clip(CircleShape).background(Color(0xFF00B894)), contentAlignment = Alignment.Center) {
+                    Text(text = "↑", color = Color.White, fontSize = 11.sp, fontWeight = FontWeight.Bold)
+                }
+                Spacer(modifier = Modifier.width(10.dp))
+                Text(text = "143", color = Color(0xFF0B1220), fontSize = 16.sp, fontWeight = FontWeight.Black)
+                Spacer(modifier = Modifier.width(4.dp))
+                Text(text = "steps", color = Color(0xFF64748B), fontSize = 11.sp)
+            }
+            return
+        }
+        "sheer_quote_card" -> {
+            Column(modifier = Modifier.fillMaxWidth().padding(4.dp)) {
+                Text(
+                    text = "“Success is not the key to happiness. Happiness is the key to success. If you love what you are doing you will be successful.”",
+                    color = Color.White,
+                    fontSize = 12.sp,
+                    lineHeight = 16.sp
+                )
+                Spacer(modifier = Modifier.height(4.dp))
+                Text(text = "— ALBERT SCHWEITZER", color = Color(0xFF5C7CFA), fontSize = 10.sp, fontFamily = FontFamily.Monospace)
+            }
+            return
+        }
+        "sheer_photo_memory" -> {
+            Column(
+                modifier = Modifier.fillMaxWidth().padding(4.dp),
+                horizontalAlignment = Alignment.CenterHorizontally
+            ) {
+                Text(text = "🖼️", fontSize = 36.sp)
+                Spacer(modifier = Modifier.height(4.dp))
+                Text(text = "MEMORIES", color = Color.White, fontSize = 11.sp, fontWeight = FontWeight.Bold, letterSpacing = 2.sp)
+            }
+            return
+        }
+        else -> {
+            Column {
+                LiquidGlassChip(text = definition.category.title.uppercase(), accentColor = accentColor)
+                Spacer(modifier = Modifier.height(6.dp))
+                Text(text = definition.name, color = textColor, fontSize = 16.sp, fontWeight = FontWeight.Bold)
+                Text(text = definition.description, color = subtextColor, fontSize = 12.sp)
+            }
+        }
     }
 }

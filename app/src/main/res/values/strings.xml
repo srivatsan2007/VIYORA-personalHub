@@ -52,4 +52,31 @@
     <string name="widget_sheer_calendar_desc">Compact monthly calendar with today\'s highlighted date</string>
     <string name="widget_outline_tall_clock_label">Sheer: Tall Outline Numbers Clock</string>
     <string name="widget_outline_tall_clock_desc">Signature ultra-tall outlined clock with top-right date badge</string>
+
+    <string name="widget_sheer_orange_music_label">Sheer: Orange Headphone Player</string>
+    <string name="widget_sheer_dotted_number_label">Sheer: Dotted Energy 95</string>
+    <string name="widget_sheer_celestial_label">Sheer: Celestial Sun &amp; Moon</string>
+    <string name="widget_sheer_date_capsule_label">Sheer: Date Capsule</string>
+    <string name="widget_sheer_contact_pill_label">Sheer: SAMIRA Message Pill</string>
+    <string name="widget_sheer_dark_mode_label">Sheer: Dark Mode Toggle</string>
+    <string name="widget_sheer_google_search_label">Sheer: Google Pill Search</string>
+    <string name="widget_sheer_steps_label">Sheer: Steps Activity Ring</string>
+    <string name="widget_sheer_bluetooth_label">Sheer: Bluetooth Toggle</string>
+    <string name="widget_sheer_sound_label">Sheer: Sound Volume Toggle</string>
+    <string name="widget_sheer_day_selector_label">Sheer: Day Selector</string>
+    <string name="widget_sheer_motivation_label">Sheer: Motivation Quote</string>
+    <string name="widget_sheer_full_cal_label">Sheer: Full Month Calendar</string>
+    <string name="widget_sheer_photo_frame_label">Sheer: Photo Memory Frame</string>
+
+    <string name="widget_weather_label">Viyora: Live Weather</string>
+    <string name="widget_tasks_label">Viyora: Tasks Checklist</string>
+    <string name="widget_notes_label">Viyora: Encrypted Note</string>
+    <string name="widget_pomodoro_label">Viyora: Pomodoro Focus</string>
+    <string name="widget_agenda_label">Viyora: Agenda Schedule</string>
+    <string name="widget_finance_label">Viyora: Budget Tracker</string>
+    <string name="widget_health_label">Viyora: Health &amp; Water</string>
+    <string name="widget_dock_label">Viyora: 4-App Dock</string>
+    <string name="widget_system_card_label">Viyora: Device &amp; Storage</string>
+    <string name="widget_timetable_label">Viyora: Study Timetable</string>
+    <string name="widget_decision_label">Viyora: Decision Helper</string>
 </resources>

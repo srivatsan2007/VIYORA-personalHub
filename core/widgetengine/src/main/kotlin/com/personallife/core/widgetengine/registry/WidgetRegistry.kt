@@ -109,6 +109,188 @@ object WidgetRegistry {
             status = WidgetStatus.VERIFIED,
             providerClassName = "com.personallife.app.widget.TallOutlineClockWidgetProvider"
         ),
+        WidgetDefinition(
+            id = "sheer_orange_music",
+            name = "Sheer: Orange Headphone Player",
+            description = "Vibrant orange headphone silhouette card with 4-tile playback controls.",
+            category = WidgetCategory.MUSIC,
+            defaultSize = WidgetSizePreset.MEDIUM_4X2,
+            supportedSizes = listOf(WidgetSizePreset.MEDIUM_4X2, WidgetSizePreset.LARGE_4X3),
+            defaultTheme = WidgetThemePreset.SHEER_MIDNIGHT,
+            capabilities = setOf(WidgetCapability.MEDIA_PLAYBACK_CONTROL, WidgetCapability.INTERACTIVE_CLICKS),
+            requiredPermission = WidgetPermissionRequirement.MEDIA_SESSION,
+            status = WidgetStatus.VERIFIED,
+            providerClassName = "com.personallife.app.widget.SheerOrangeMusicWidgetProvider"
+        ),
+        WidgetDefinition(
+            id = "sheer_dotted_matrix_95",
+            name = "Sheer: Dotted Energy 95",
+            description = "Giant retro dot-matrix numeric card showing live battery percentage and status.",
+            category = WidgetCategory.BATTERY,
+            defaultSize = WidgetSizePreset.SQUARE_2X2,
+            supportedSizes = listOf(WidgetSizePreset.SQUARE_2X2, WidgetSizePreset.MEDIUM_4X2),
+            defaultTheme = WidgetThemePreset.SHEER_MIDNIGHT,
+            capabilities = setOf(WidgetCapability.BATTERY_MONITORING, WidgetCapability.INTERACTIVE_CLICKS),
+            requiredPermission = WidgetPermissionRequirement.NONE,
+            status = WidgetStatus.VERIFIED,
+            providerClassName = "com.personallife.app.widget.SheerDottedPercentWidgetProvider"
+        ),
+        WidgetDefinition(
+            id = "sheer_celestial_dial",
+            name = "Sheer: Celestial Sun & Moon",
+            description = "Circular day/night dial with sky blue daytime sunrise and deep navy night sunset.",
+            category = WidgetCategory.WEATHER,
+            defaultSize = WidgetSizePreset.SQUARE_2X2,
+            supportedSizes = listOf(WidgetSizePreset.SQUARE_2X2),
+            defaultTheme = WidgetThemePreset.SHEER_MIDNIGHT,
+            capabilities = setOf(WidgetCapability.INTERACTIVE_CLICKS),
+            requiredPermission = WidgetPermissionRequirement.NONE,
+            status = WidgetStatus.VERIFIED,
+            providerClassName = "com.personallife.app.widget.SheerCelestialDialWidgetProvider"
+        ),
+        WidgetDefinition(
+            id = "sheer_date_capsule",
+            name = "Sheer: Date Stadium Capsule",
+            description = "Stadium capsule with circular day badge and stacked month & weekday.",
+            category = WidgetCategory.CALENDAR,
+            defaultSize = WidgetSizePreset.COMPACT_2X1,
+            supportedSizes = listOf(WidgetSizePreset.COMPACT_2X1, WidgetSizePreset.WIDE_4X1),
+            defaultTheme = WidgetThemePreset.SHEER_MIDNIGHT,
+            capabilities = setOf(WidgetCapability.REALTIME_CLOCK, WidgetCapability.INTERACTIVE_CLICKS),
+            requiredPermission = WidgetPermissionRequirement.NONE,
+            status = WidgetStatus.VERIFIED,
+            providerClassName = "com.personallife.app.widget.SheerDateCapsuleWidgetProvider"
+        ),
+        WidgetDefinition(
+            id = "sheer_contact_pill",
+            name = "Sheer: SAMIRA Message Pill",
+            description = "Stadium capsule with chat bubble icon and dot-matrix contact name.",
+            category = WidgetCategory.UTILITIES,
+            defaultSize = WidgetSizePreset.COMPACT_2X1,
+            supportedSizes = listOf(WidgetSizePreset.COMPACT_2X1, WidgetSizePreset.WIDE_4X1),
+            defaultTheme = WidgetThemePreset.SHEER_MIDNIGHT,
+            capabilities = setOf(WidgetCapability.INTERACTIVE_CLICKS),
+            requiredPermission = WidgetPermissionRequirement.NONE,
+            status = WidgetStatus.VERIFIED,
+            providerClassName = "com.personallife.app.widget.SheerContactPillWidgetProvider"
+        ),
+        WidgetDefinition(
+            id = "sheer_dark_toggle",
+            name = "Sheer: Dark Mode Toggle",
+            description = "Minimalist capsule toggle for quick access to system display settings.",
+            category = WidgetCategory.UTILITIES,
+            defaultSize = WidgetSizePreset.COMPACT_2X1,
+            supportedSizes = listOf(WidgetSizePreset.COMPACT_2X1, WidgetSizePreset.WIDE_4X1),
+            defaultTheme = WidgetThemePreset.SHEER_MIDNIGHT,
+            capabilities = setOf(WidgetCapability.INTERACTIVE_CLICKS),
+            requiredPermission = WidgetPermissionRequirement.NONE,
+            status = WidgetStatus.VERIFIED,
+            providerClassName = "com.personallife.app.widget.SheerDarkModePillWidgetProvider"
+        ),
+        WidgetDefinition(
+            id = "sheer_google_search",
+            name = "Sheer: Google Pill Search",
+            description = "Clean white stadium search bar with authentic Google G icon.",
+            category = WidgetCategory.UTILITIES,
+            defaultSize = WidgetSizePreset.WIDE_4X1,
+            supportedSizes = listOf(WidgetSizePreset.WIDE_4X1, WidgetSizePreset.MEDIUM_4X2),
+            defaultTheme = WidgetThemePreset.CLEAR_TRANSLUCENT,
+            capabilities = setOf(WidgetCapability.INTERACTIVE_CLICKS),
+            requiredPermission = WidgetPermissionRequirement.NONE,
+            status = WidgetStatus.VERIFIED,
+            providerClassName = "com.personallife.app.widget.SheerGoogleSearchWidgetProvider"
+        ),
+        WidgetDefinition(
+            id = "sheer_steps_activity",
+            name = "Sheer: Steps Activity Ring",
+            description = "Compact health activity capsule with circular target ring and live step count.",
+            category = WidgetCategory.HEALTH,
+            defaultSize = WidgetSizePreset.COMPACT_2X1,
+            supportedSizes = listOf(WidgetSizePreset.COMPACT_2X1, WidgetSizePreset.WIDE_4X1),
+            defaultTheme = WidgetThemePreset.CLEAR_TRANSLUCENT,
+            capabilities = setOf(WidgetCapability.INTERACTIVE_CLICKS),
+            requiredPermission = WidgetPermissionRequirement.NONE,
+            status = WidgetStatus.VERIFIED,
+            providerClassName = "com.personallife.app.widget.SheerStepsActivityWidgetProvider"
+        ),
+        WidgetDefinition(
+            id = "sheer_bluetooth_toggle",
+            name = "Sheer: Bluetooth Quick Pill",
+            description = "Electric purple stadium pill with direct Bluetooth settings launcher.",
+            category = WidgetCategory.UTILITIES,
+            defaultSize = WidgetSizePreset.COMPACT_2X1,
+            supportedSizes = listOf(WidgetSizePreset.COMPACT_2X1),
+            defaultTheme = WidgetThemePreset.MINT_AND_LAVENDER,
+            capabilities = setOf(WidgetCapability.INTERACTIVE_CLICKS),
+            requiredPermission = WidgetPermissionRequirement.NONE,
+            status = WidgetStatus.VERIFIED,
+            providerClassName = "com.personallife.app.widget.SheerBluetoothToggleWidgetProvider"
+        ),
+        WidgetDefinition(
+            id = "sheer_sound_toggle",
+            name = "Sheer: Sound Volume Quick Pill",
+            description = "Mint green stadium pill with direct sound settings launcher.",
+            category = WidgetCategory.UTILITIES,
+            defaultSize = WidgetSizePreset.COMPACT_2X1,
+            supportedSizes = listOf(WidgetSizePreset.COMPACT_2X1),
+            defaultTheme = WidgetThemePreset.MINT_AND_LAVENDER,
+            capabilities = setOf(WidgetCapability.INTERACTIVE_CLICKS),
+            requiredPermission = WidgetPermissionRequirement.NONE,
+            status = WidgetStatus.VERIFIED,
+            providerClassName = "com.personallife.app.widget.SheerSoundToggleWidgetProvider"
+        ),
+        WidgetDefinition(
+            id = "sheer_day_selector",
+            name = "Sheer: Minimalist Day Selector",
+            description = "Vertical day selector showing previous, today (highlighted), and next day.",
+            category = WidgetCategory.CALENDAR,
+            defaultSize = WidgetSizePreset.SQUARE_2X2,
+            supportedSizes = listOf(WidgetSizePreset.SQUARE_2X2, WidgetSizePreset.MEDIUM_4X2),
+            defaultTheme = WidgetThemePreset.SHEER_MIDNIGHT,
+            capabilities = setOf(WidgetCapability.REALTIME_CLOCK, WidgetCapability.INTERACTIVE_CLICKS),
+            requiredPermission = WidgetPermissionRequirement.NONE,
+            status = WidgetStatus.VERIFIED,
+            providerClassName = "com.personallife.app.widget.SheerDaySelectorWidgetProvider"
+        ),
+        WidgetDefinition(
+            id = "sheer_quote_card",
+            name = "Sheer: Motivation Quote Card",
+            description = "Albert Schweitzer quote card with typography and author attribution.",
+            category = WidgetCategory.QUOTES,
+            defaultSize = WidgetSizePreset.MEDIUM_4X2,
+            supportedSizes = listOf(WidgetSizePreset.MEDIUM_4X2, WidgetSizePreset.LARGE_4X3),
+            defaultTheme = WidgetThemePreset.SHEER_MIDNIGHT,
+            capabilities = setOf(WidgetCapability.INTERACTIVE_CLICKS),
+            requiredPermission = WidgetPermissionRequirement.NONE,
+            status = WidgetStatus.VERIFIED,
+            providerClassName = "com.personallife.app.widget.SheerMotivationQuoteWidgetProvider"
+        ),
+        WidgetDefinition(
+            id = "sheer_full_calendar",
+            name = "Sheer: Full Month Calendar Card",
+            description = "Full 31-day numeric grid calendar card with month header and circled today.",
+            category = WidgetCategory.CALENDAR,
+            defaultSize = WidgetSizePreset.SQUARE_2X2,
+            supportedSizes = listOf(WidgetSizePreset.SQUARE_2X2, WidgetSizePreset.MEDIUM_4X2),
+            defaultTheme = WidgetThemePreset.CLEAR_TRANSLUCENT,
+            capabilities = setOf(WidgetCapability.INTERACTIVE_CLICKS),
+            requiredPermission = WidgetPermissionRequirement.NONE,
+            status = WidgetStatus.VERIFIED,
+            providerClassName = "com.personallife.app.widget.SheerFullCalendarWidgetProvider"
+        ),
+        WidgetDefinition(
+            id = "sheer_photo_memory",
+            name = "Sheer: Photo Memory Frame",
+            description = "Squircle memory frame showcasing portrait with liquid glass accent.",
+            category = WidgetCategory.GALLERY,
+            defaultSize = WidgetSizePreset.SQUARE_2X2,
+            supportedSizes = listOf(WidgetSizePreset.SQUARE_2X2, WidgetSizePreset.LARGE_4X3),
+            defaultTheme = WidgetThemePreset.SHEER_MIDNIGHT,
+            capabilities = setOf(WidgetCapability.PHOTO_DISPLAY, WidgetCapability.INTERACTIVE_CLICKS),
+            requiredPermission = WidgetPermissionRequirement.NONE,
+            status = WidgetStatus.VERIFIED,
+            providerClassName = "com.personallife.app.widget.SheerPhotoFrameWidgetProvider"
+        ),
 
         // ==========================================
         // OS ECOSYSTEMS: GOOGLE PIXEL, NOTHING OS & SAMSUNG ONE UI
@@ -386,7 +568,8 @@ object WidgetRegistry {
             defaultTheme = WidgetThemePreset.OLIVE_AND_CREAM,
             capabilities = setOf(WidgetCapability.TRANSLUCENT_GLASS),
             requiredPermission = WidgetPermissionRequirement.NONE,
-            status = WidgetStatus.IMPLEMENTED
+            status = WidgetStatus.VERIFIED,
+            providerClassName = "com.personallife.app.widget.QuotesWidgetProvider"
         ),
 
         // ==========================================
@@ -402,7 +585,8 @@ object WidgetRegistry {
             defaultTheme = WidgetThemePreset.DEEP_OCEAN,
             capabilities = setOf(WidgetCapability.TRANSLUCENT_GLASS),
             requiredPermission = WidgetPermissionRequirement.LOCATION,
-            status = WidgetStatus.IMPLEMENTED
+            status = WidgetStatus.VERIFIED,
+            providerClassName = "com.personallife.app.widget.WeatherWidgetProvider"
         ),
         WidgetDefinition(
             id = "weather_clock_combo",
@@ -414,7 +598,8 @@ object WidgetRegistry {
             defaultTheme = WidgetThemePreset.FROSTED_GLASS,
             capabilities = setOf(WidgetCapability.REALTIME_CLOCK, WidgetCapability.TRANSLUCENT_GLASS),
             requiredPermission = WidgetPermissionRequirement.LOCATION,
-            status = WidgetStatus.IMPLEMENTED
+            status = WidgetStatus.VERIFIED,
+            providerClassName = "com.personallife.app.widget.WeatherWidgetProvider"
         ),
 
         // ==========================================
@@ -430,7 +615,8 @@ object WidgetRegistry {
             defaultTheme = WidgetThemePreset.CLEAR_TRANSLUCENT,
             capabilities = setOf(WidgetCapability.PHOTO_DISPLAY, WidgetCapability.TRANSLUCENT_GLASS),
             requiredPermission = WidgetPermissionRequirement.PHOTO_PICKER,
-            status = WidgetStatus.IMPLEMENTED
+            status = WidgetStatus.VERIFIED,
+            providerClassName = "com.personallife.app.widget.GalleryWidgetProvider"
         ),
         WidgetDefinition(
             id = "gallery_polaroid_memories",
@@ -442,7 +628,8 @@ object WidgetRegistry {
             defaultTheme = WidgetThemePreset.OLIVE_AND_CREAM,
             capabilities = setOf(WidgetCapability.PHOTO_DISPLAY),
             requiredPermission = WidgetPermissionRequirement.PHOTO_PICKER,
-            status = WidgetStatus.IMPLEMENTED
+            status = WidgetStatus.VERIFIED,
+            providerClassName = "com.personallife.app.widget.GalleryWidgetProvider"
         ),
 
         // ==========================================
@@ -458,7 +645,8 @@ object WidgetRegistry {
             defaultTheme = WidgetThemePreset.FROSTED_GLASS,
             capabilities = setOf(WidgetCapability.INTERACTIVE_CLICKS, WidgetCapability.TRANSLUCENT_GLASS),
             requiredPermission = WidgetPermissionRequirement.NONE,
-            status = WidgetStatus.IMPLEMENTED
+            status = WidgetStatus.VERIFIED,
+            providerClassName = "com.personallife.app.widget.QuickDockWidgetProvider"
         ),
 
         // ==========================================
@@ -487,7 +675,8 @@ object WidgetRegistry {
             defaultTheme = WidgetThemePreset.SUNSET_AMBER,
             capabilities = setOf(WidgetCapability.INTERACTIVE_CLICKS, WidgetCapability.TRANSLUCENT_GLASS),
             requiredPermission = WidgetPermissionRequirement.NONE,
-            status = WidgetStatus.IMPLEMENTED
+            status = WidgetStatus.VERIFIED,
+            providerClassName = "com.personallife.app.widget.PomodoroWidgetProvider"
         ),
 
         // ==========================================
@@ -503,7 +692,8 @@ object WidgetRegistry {
             defaultTheme = WidgetThemePreset.OLIVE_AND_CREAM,
             capabilities = setOf(WidgetCapability.TRANSLUCENT_GLASS),
             requiredPermission = WidgetPermissionRequirement.NONE,
-            status = WidgetStatus.IMPLEMENTED
+            status = WidgetStatus.VERIFIED,
+            providerClassName = "com.personallife.app.widget.AgendaWidgetProvider"
         ),
 
         // ==========================================
@@ -519,7 +709,8 @@ object WidgetRegistry {
             defaultTheme = WidgetThemePreset.OLIVE_AND_CREAM,
             capabilities = setOf(WidgetCapability.INTERACTIVE_CLICKS, WidgetCapability.TRANSLUCENT_GLASS),
             requiredPermission = WidgetPermissionRequirement.NONE,
-            status = WidgetStatus.VERIFIED
+            status = WidgetStatus.VERIFIED,
+            providerClassName = "com.personallife.app.widget.TasksWidgetProvider"
         ),
 
         // ==========================================
@@ -535,7 +726,8 @@ object WidgetRegistry {
             defaultTheme = WidgetThemePreset.MINT_AND_LAVENDER,
             capabilities = setOf(WidgetCapability.TRANSLUCENT_GLASS, WidgetCapability.CUSTOM_ACCENT_COLOR),
             requiredPermission = WidgetPermissionRequirement.NONE,
-            status = WidgetStatus.VERIFIED
+            status = WidgetStatus.VERIFIED,
+            providerClassName = "com.personallife.app.widget.StudyTimetableWidgetProvider"
         ),
 
         // ==========================================
@@ -551,7 +743,8 @@ object WidgetRegistry {
             defaultTheme = WidgetThemePreset.SUNSET_AMBER,
             capabilities = setOf(WidgetCapability.TRANSLUCENT_GLASS, WidgetCapability.CUSTOM_ACCENT_COLOR),
             requiredPermission = WidgetPermissionRequirement.NONE,
-            status = WidgetStatus.VERIFIED
+            status = WidgetStatus.VERIFIED,
+            providerClassName = "com.personallife.app.widget.FinanceBudgetWidgetProvider"
         ),
 
         // ==========================================
@@ -567,7 +760,8 @@ object WidgetRegistry {
             defaultTheme = WidgetThemePreset.ROSE_QUARTZ,
             capabilities = setOf(WidgetCapability.INTERACTIVE_CLICKS, WidgetCapability.QUICK_ACTION_LOGGING, WidgetCapability.TRANSLUCENT_GLASS),
             requiredPermission = WidgetPermissionRequirement.NONE,
-            status = WidgetStatus.VERIFIED
+            status = WidgetStatus.VERIFIED,
+            providerClassName = "com.personallife.app.widget.HealthWaterWidgetProvider"
         ),
 
         // ==========================================
@@ -600,7 +794,8 @@ object WidgetRegistry {
             defaultTheme = WidgetThemePreset.FROSTED_GLASS,
             capabilities = setOf(WidgetCapability.TRANSLUCENT_GLASS),
             requiredPermission = WidgetPermissionRequirement.NONE,
-            status = WidgetStatus.IMPLEMENTED
+            status = WidgetStatus.VERIFIED,
+            providerClassName = "com.personallife.app.widget.SystemDeviceCardWidgetProvider"
         ),
 
         // ==========================================
@@ -616,7 +811,8 @@ object WidgetRegistry {
             defaultTheme = WidgetThemePreset.OLIVE_AND_CREAM,
             capabilities = setOf(WidgetCapability.INTERACTIVE_CLICKS, WidgetCapability.TRANSLUCENT_GLASS),
             requiredPermission = WidgetPermissionRequirement.NONE,
-            status = WidgetStatus.IMPLEMENTED
+            status = WidgetStatus.VERIFIED,
+            providerClassName = "com.personallife.app.widget.DecisionHelperWidgetProvider"
         )
     )
 

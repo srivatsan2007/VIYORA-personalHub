@@ -34,10 +34,14 @@ class PersonalLifeApplication : Application() {
                 OneUiClockWidgetProvider.updateAll(context)
                 OneUiBatteryWidgetProvider.updateAll(context)
                 DottedBatteryWidgetProvider.updateAll(context)
+                com.personallife.app.widget.SheerDottedPercentWidgetProvider.updateAll(context)
                 SleepingClockWidgetProvider.updateAll(context)
                 StorageCapsuleWidgetProvider.updateAll(context)
                 MiniCalendarWidgetProvider.updateAll(context)
                 TallOutlineClockWidgetProvider.updateAll(context)
+                com.personallife.app.widget.SheerDateCapsuleWidgetProvider.updateAll(context)
+                com.personallife.app.widget.SheerDaySelectorWidgetProvider.updateAll(context)
+                com.personallife.app.widget.SheerFullCalendarWidgetProvider.updateAll(context)
             }
         }
     }

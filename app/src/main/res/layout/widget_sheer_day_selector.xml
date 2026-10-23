@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widget_sheer_day_selector_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/widget_sheer_navy_card"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="12dp">
+
+    <!-- Previous Day -->
+    <TextView
+        android:id="@+id/widget_sheer_day_prev"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="monospace"
+        android:text="14"
+        android:textColor="#2A3C5E"
+        android:textSize="18sp"
+        android:layout_marginBottom="4dp" />
+
+    <!-- Current Day (Highlighted) -->
+    <TextView
+        android:id="@+id/widget_sheer_day_current"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="monospace"
+        android:text="&gt; 15 WED &lt;"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:letterSpacing="0.05" />
+
+    <!-- Next Day -->
+    <TextView
+        android:id="@+id/widget_sheer_day_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="monospace"
+        android:text="16"
+        android:textColor="#2A3C5E"
+        android:textSize="18sp"
+        android:layout_marginTop="4dp" />
+
+</LinearLayout>

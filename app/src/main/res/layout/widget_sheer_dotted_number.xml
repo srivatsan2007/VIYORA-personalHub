@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widget_sheer_dotted_number_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/widget_sheer_navy_card"
+    android:padding="16dp">
+
+    <!-- Top label -->
+    <TextView
+        android:id="@+id/widget_sheer_dotted_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:fontFamily="monospace"
+        android:text="ENERGY"
+        android:textColor="#5C7CFA"
+        android:textSize="12sp"
+        android:letterSpacing="0.15" />
+
+    <!-- Giant Dotted Number -->
+    <TextView
+        android:id="@+id/widget_sheer_dotted_digits"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:fontFamily="monospace"
+        android:text="95"
+        android:textColor="#FFFFFF"
+        android:textSize="64sp"
+        android:textStyle="bold"
+        android:letterSpacing="0.05" />
+
+    <!-- Subtitle / State -->
+    <TextView
+        android:id="@+id/widget_sheer_dotted_sub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:fontFamily="monospace"
+        android:text="● ACTIVE"
+        android:textColor="#8E9CAE"
+        android:textSize="11sp" />
+
+</RelativeLayout>

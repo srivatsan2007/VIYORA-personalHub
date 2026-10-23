@@ -22,18 +22,28 @@ class BatteryDataProvider @Inject constructor(
     @ApplicationContext private val context: Context
 ) {
     fun getBatterySnapshot(): BatterySnapshot {
+        val bm = context.getSystemService(Context.BATTERY_SERVICE) as? BatteryManager
+        val hardwareCapacity = bm?.getIntProperty(BatteryManager.BATTERY_PROPERTY_CAPACITY) ?: -1
+        val isHardwareCharging = bm?.isCharging ?: false
+
         val intentFilter = IntentFilter(Intent.ACTION_BATTERY_CHANGED)
         val batteryStatus: Intent? = context.registerReceiver(null, intentFilter)
 
-        val level = batteryStatus?.getIntExtra(BatteryManager.EXTRA_LEVEL, -1) ?: 80
+        val level = batteryStatus?.getIntExtra(BatteryManager.EXTRA_LEVEL, -1) ?: -1
         val scale = batteryStatus?.getIntExtra(BatteryManager.EXTRA_SCALE, -1) ?: 100
-        val percentage = if (scale > 0 && level >= 0) ((level.toFloat() / scale) * 100).toInt() else 80
+        val stickyPercentage = if (scale > 0 && level >= 0) ((level.toFloat() / scale) * 100).toInt() else -1
+
+        val percentage = when {
+            hardwareCapacity in 1..100 -> hardwareCapacity
+            stickyPercentage in 0..100 -> stickyPercentage
+            else -> 80
+        }
 
         val status = batteryStatus?.getIntExtra(BatteryManager.EXTRA_STATUS, -1) ?: -1
-        val isCharging = status == BatteryManager.BATTERY_STATUS_CHARGING || status == BatteryManager.BATTERY_STATUS_FULL
+        val isCharging = isHardwareCharging || status == BatteryManager.BATTERY_STATUS_CHARGING || status == BatteryManager.BATTERY_STATUS_FULL
 
         val plugged = batteryStatus?.getIntExtra(BatteryManager.EXTRA_PLUGGED, -1) ?: 0
-        val isPlugged = plugged > 0
+        val isPlugged = plugged > 0 || isHardwareCharging
 
         val tempTenths = batteryStatus?.getIntExtra(BatteryManager.EXTRA_TEMPERATURE, 280) ?: 280
         val temperature = tempTenths / 10.0f

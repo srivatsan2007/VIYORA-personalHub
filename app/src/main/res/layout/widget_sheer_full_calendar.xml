@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widget_sheer_full_calendar_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/widget_white_card"
+    android:orientation="vertical"
+    android:padding="14dp">
+
+    <!-- Month Header -->
+    <TextView
+        android:id="@+id/widget_sheer_full_cal_month"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-black"
+        android:text="OCTOBER 2026"
+        android:textColor="#0B1220"
+        android:textSize="13sp"
+        android:letterSpacing="0.08" />
+
+    <!-- Day column headers -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:fontFamily="monospace"
+        android:text="S   M   T   W   T   F   S"
+        android:textColor="#94A3B8"
+        android:textSize="11sp"
+        android:letterSpacing="0.05" />
+
+    <!-- Calendar sample rows -->
+    <TextView
+        android:id="@+id/widget_sheer_full_cal_grid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:fontFamily="monospace"
+        android:text="            1   2   3\n4   5   6   7   8   9  10\n11 12 13 14 15 16 17\n18 19 20 21 22 [23] 24\n25 26 27 28 29 30 31"
+        android:textColor="#1E293B"
+        android:textSize="11sp"
+        android:lineSpacingExtra="3dp" />
+
+</LinearLayout>

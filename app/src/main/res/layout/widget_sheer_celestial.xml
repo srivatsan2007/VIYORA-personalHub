@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widget_sheer_celestial_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/widget_celestial_bg"
+    android:padding="14dp">
+
+    <!-- Day Section (Top) -->
+    <LinearLayout
+        android:id="@+id/widget_sheer_celestial_day"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_marginTop="6dp">
+
+        <ImageView
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:src="@drawable/ic_sun"
+            android:contentDescription="Sun" />
+
+        <TextView
+            android:id="@+id/widget_sheer_celestial_sunrise"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:text="06:14 AM"
+            android:textColor="#FFFFFF"
+            android:textSize="11sp"
+            android:layout_marginTop="2dp" />
+    </LinearLayout>
+
+    <!-- Night Section (Bottom) -->
+    <LinearLayout
+        android:id="@+id/widget_sheer_celestial_night"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_marginBottom="6dp">
+
+        <TextView
+            android:id="@+id/widget_sheer_celestial_sunset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:text="07:11 PM"
+            android:textColor="#A0AEC0"
+            android:textSize="11sp"
+            android:layout_marginBottom="2dp" />
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_moon"
+            android:contentDescription="Moon" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -310,6 +310,328 @@
                 android:resource="@xml/widget_outline_tall_clock_info" />
         </receiver>
 
+        <!-- New Sheer KWGT Reference Widgets -->
+        <receiver
+            android:name=".widget.SheerOrangeMusicWidgetProvider"
+            android:exported="true"
+            android:label="@string/widget_sheer_orange_music_label">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_sheer_orange_music_info" />
+        </receiver>
+
+        <receiver
+            android:name=".widget.SheerDottedPercentWidgetProvider"
+            android:exported="true"
+            android:label="@string/widget_sheer_dotted_number_label">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+                <action android:name="android.intent.action.BATTERY_LOW" />
+                <action android:name="android.intent.action.BATTERY_OKAY" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_sheer_dotted_number_info" />
+        </receiver>
+
+        <receiver
+            android:name=".widget.SheerCelestialDialWidgetProvider"
+            android:exported="true"
+            android:label="@string/widget_sheer_celestial_label">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_sheer_celestial_info" />
+        </receiver>
+
+        <receiver
+            android:name=".widget.SheerDateCapsuleWidgetProvider"
+            android:exported="true"
+            android:label="@string/widget_sheer_date_capsule_label">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_sheer_date_capsule_info" />
+        </receiver>
+
+        <receiver
+            android:name=".widget.SheerContactPillWidgetProvider"
+            android:exported="true"
+            android:label="@string/widget_sheer_contact_pill_label">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_sheer_contact_pill_info" />
+        </receiver>
+
+        <receiver
+            android:name=".widget.SheerDarkModePillWidgetProvider"
+            android:exported="true"
+            android:label="@string/widget_sheer_dark_mode_label">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_sheer_dark_mode_pill_info" />
+        </receiver>
+
+        <receiver
+            android:name=".widget.SheerGoogleSearchWidgetProvider"
+            android:exported="true"
+            android:label="@string/widget_sheer_google_search_label">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_sheer_google_search_info" />
+        </receiver>
+
+        <receiver
+            android:name=".widget.SheerStepsActivityWidgetProvider"
+            android:exported="true"
+            android:label="@string/widget_sheer_steps_label">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_sheer_steps_info" />
+        </receiver>
+
+        <receiver
+            android:name=".widget.SheerBluetoothToggleWidgetProvider"
+            android:exported="true"
+            android:label="@string/widget_sheer_bluetooth_label">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_sheer_bluetooth_pill_info" />
+        </receiver>
+
+        <receiver
+            android:name=".widget.SheerSoundToggleWidgetProvider"
+            android:exported="true"
+            android:label="@string/widget_sheer_sound_label">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_sheer_sound_pill_info" />
+        </receiver>
+
+        <receiver
+            android:name=".widget.SheerDaySelectorWidgetProvider"
+            android:exported="true"
+            android:label="@string/widget_sheer_day_selector_label">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_sheer_day_selector_info" />
+        </receiver>
+
+        <receiver
+            android:name=".widget.SheerMotivationQuoteWidgetProvider"
+            android:exported="true"
+            android:label="@string/widget_sheer_motivation_label">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_sheer_motivation_info" />
+        </receiver>
+
+        <receiver
+            android:name=".widget.SheerFullCalendarWidgetProvider"
+            android:exported="true"
+            android:label="@string/widget_sheer_full_cal_label">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_sheer_full_calendar_info" />
+        </receiver>
+
+        <receiver
+            android:name=".widget.SheerPhotoFrameWidgetProvider"
+            android:exported="true"
+            android:label="@string/widget_sheer_photo_frame_label">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_sheer_photo_frame_info" />
+        </receiver>
+
+        <!-- Core Category Widget Receivers -->
+        <receiver
+            android:name=".widget.WeatherWidgetProvider"
+            android:exported="true"
+            android:label="@string/widget_weather_label">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_weather_info" />
+        </receiver>
+
+        <receiver
+            android:name=".widget.TasksWidgetProvider"
+            android:exported="true"
+            android:label="@string/widget_tasks_label">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_tasks_info" />
+        </receiver>
+
+        <receiver
+            android:name=".widget.QuickNoteWidgetProvider"
+            android:exported="true"
+            android:label="@string/widget_notes_label">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_notes_info" />
+        </receiver>
+
+        <receiver
+            android:name=".widget.PomodoroWidgetProvider"
+            android:exported="true"
+            android:label="@string/widget_pomodoro_label">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_pomodoro_info" />
+        </receiver>
+
+        <receiver
+            android:name=".widget.AgendaWidgetProvider"
+            android:exported="true"
+            android:label="@string/widget_agenda_label">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_agenda_info" />
+        </receiver>
+
+        <receiver
+            android:name=".widget.FinanceBudgetWidgetProvider"
+            android:exported="true"
+            android:label="@string/widget_finance_label">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_finance_info" />
+        </receiver>
+
+        <receiver
+            android:name=".widget.HealthWaterWidgetProvider"
+            android:exported="true"
+            android:label="@string/widget_health_label">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_health_info" />
+        </receiver>
+
+        <receiver
+            android:name=".widget.QuickDockWidgetProvider"
+            android:exported="true"
+            android:label="@string/widget_dock_label">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_dock_info" />
+        </receiver>
+
+        <receiver
+            android:name=".widget.SystemDeviceCardWidgetProvider"
+            android:exported="true"
+            android:label="@string/widget_system_card_label">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_system_card_info" />
+        </receiver>
+
+        <receiver
+            android:name=".widget.StudyTimetableWidgetProvider"
+            android:exported="true"
+            android:label="@string/widget_timetable_label">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_timetable_info" />
+        </receiver>
+
+        <receiver
+            android:name=".widget.DecisionHelperWidgetProvider"
+            android:exported="true"
+            android:label="@string/widget_decision_label">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_decision_info" />
+        </receiver>
+
+        <receiver
+            android:name=".widget.GalleryWidgetProvider"
+            android:exported="true"
+            android:label="@string/widget_sheer_photo_frame_label">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_sheer_photo_frame_info" />
+        </receiver>
+
     </application>
 
 </manifest>

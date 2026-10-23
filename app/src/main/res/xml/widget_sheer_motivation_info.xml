@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android"
+    android:initialKeyguardLayout="@layout/widget_sheer_motivation"
+    android:initialLayout="@layout/widget_sheer_motivation"
+    android:minWidth="260dp"
+    android:minHeight="110dp"
+    android:previewImage="@drawable/ic_viyora_logo"
+    android:resizeMode="horizontal|vertical"
+    android:updatePeriodMillis="1800000"
+    android:widgetCategory="home_screen" />
