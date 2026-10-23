@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widget_hybrid_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/widget_glass_bg"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:padding="14dp">
+
+    <!-- Left Side: Analog Dial -->
+    <AnalogClock
+        android:id="@+id/hybrid_analog_view"
+        android:layout_width="86dp"
+        android:layout_height="86dp"
+        android:dial="@drawable/clock_dial"
+        android:hand_hour="@drawable/clock_hour_hand"
+        android:hand_minute="@drawable/clock_minute_hand" />
+
+    <!-- Right Side: Digital Time, Date & Quick Hub Banner -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:paddingStart="16dp"
+        android:paddingEnd="4dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/widget_chip_bg">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="HYBRID WATCH"
+                android:textColor="#38BDF8"
+                android:textSize="9sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.08" />
+        </LinearLayout>
+
+        <TextClock
+            android:id="@+id/hybrid_digital_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:format12Hour="h:mm a"
+            android:format24Hour="HH:mm"
+            android:textColor="#F8FAFC"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:includeFontPadding="false"
+            android:layout_marginTop="2dp" />
+
+        <TextClock
+            android:id="@+id/hybrid_digital_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:format12Hour="EEE, MMM d"
+            android:format24Hour="EEE, MMM d"
+            android:textColor="#94A3B8"
+            android:textSize="12sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tap to open Viyora"
+            android:textColor="#38BDF8"
+            android:textSize="10sp"
+            android:layout_marginTop="4dp" />
+
+    </LinearLayout>
+
+</LinearLayout>

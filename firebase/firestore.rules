@@ -1,0 +1,31 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Helper functions for strict authentication & authorization
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+
+    function isOwner(userId) {
+      return isAuthenticated() && request.auth.uid == userId;
+    }
+
+    // User Root Document & Profile
+    match /users/{userId} {
+      // Users can only read and write their own profile and document tree
+      allow read, write: if isOwner(userId);
+
+      // Subcollections (Preferences, Enabled Modules, Dashboard Config)
+      match /{subcollection=**} {
+        allow read, write: if isOwner(userId);
+      }
+    }
+
+    // Default deny all other collections to prevent data leakage
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="200dp"
+    android:viewportWidth="200"
+    android:viewportHeight="200">
+
+    <!-- Hour Hand pointing upward, pivot at (100, 100) -->
+    <path
+        android:fillColor="#F8FAFC"
+        android:pathData="M97,108 L96,48 L100,42 L104,48 L103,108 Z" />
+
+    <!-- Center Pivot Cap -->
+    <path
+        android:fillColor="#38BDF8"
+        android:pathData="M100,94 A6,6 0 1,0 100,106 A6,6 0 1,0 100,94 Z" />
+
+</vector>

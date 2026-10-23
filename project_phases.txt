@@ -1,0 +1,179 @@
+================================================================================
+                    PERSONAL HUB - ANDROID MOBILE APP
+             Comprehensive Project Phases & Technical Blueprint
+================================================================================
+
+1. PROJECT OVERVIEW
+--------------------------------------------------------------------------------
+Personal Hub is an all-in-one, privacy-first Android application designed to 
+manage personal information, health tracking, education, finances, and digital 
+wellbeing (screen time). The app emphasizes modular in-app/OS widgets and a 
+"Zero Data Leak" architecture (local-first, fully encrypted, no unauthorized 
+network transmission).
+
+Primary Platform: Android (Native)
+Core Language   : Kotlin 2.0+
+UI Framework    : Jetpack Compose + Material Design 3
+Home Widgets    : Jetpack Glance (Compose-based AppWidget)
+Local Database  : Room with SQLCipher (AES-256 Encryption)
+Key Management  : Android Keystore System (Hardware-backed TEE / StrongBox)
+Biometrics      : AndroidX BiometricPrompt API
+
+
+================================================================================
+2. ZERO-DATA-LEAK SECURITY FOUNDATION
+================================================================================
+- Local-First Architecture:
+  * No external backend dependency; all data stays on the physical device.
+  * No unnecessary INTERNET permission, guaranteeing no background data leaks.
+  * Zero third-party telemetry, tracking, or analytics SDKs.
+
+- Encryption at Rest:
+  * SQLCipher with Room DB providing AES-256 database-level encryption.
+  * Encryption key dynamically generated and securely stored in the 
+    Android Keystore (never hardcoded or exposed).
+  * EncryptedSharedPreferences (AndroidX Security Crypto) for settings.
+
+- Runtime Privacy & Anti-Snooping:
+  * BiometricPrompt (Fingerprint/PIN/Face) lock for app launch & sensitive vaults.
+  * WindowManager.LayoutParams.FLAG_SECURE enabled on sensitive screens to:
+    - Block screenshots and screen recordings.
+    - Blank out app preview in the Android "Recent Apps" switcher.
+  * Auto-lock timeout when app goes to the background.
+
+
+================================================================================
+3. DEVELOPMENT PHASES
+================================================================================
+
+--------------------------------------------------------------------------------
+PHASE 1: Project Setup, Security Core & Cryptographic Infrastructure
+--------------------------------------------------------------------------------
+Goal: Establish the base Android project with hardware-backed encryption,
+      biometrics, and secure local storage before building any features.
+
+Tasks:
+1. Initialize native Android project with Jetpack Compose & Material 3.
+2. Configure Gradle dependencies:
+   - Jetpack Compose & Navigation Compose
+   - Room Database + SQLCipher (net.zetetic:sqlcipher-android)
+   - AndroidX Biometric (androidx.biometric:biometric)
+   - AndroidX Security Crypto (androidx.security:security-crypto)
+   - Dependency Injection (Dagger Hilt / Koin)
+   - Coroutines & Kotlin Flow
+3. Implement KeyStoreManager:
+   - Generate and retrieve hardware-backed AES-GCM keys via AndroidKeyStore.
+4. Setup Secure Database:
+   - Configure encrypted Room database using SQLCipher SupportFactory.
+5. Implement Biometric & App Lock Gateway:
+   - BiometricPrompt authentication flow.
+   - Session timeout / auto-lock lifecycle observer.
+   - Screen protection via FLAG_SECURE.
+
+
+--------------------------------------------------------------------------------
+PHASE 2: In-App Modular Dashboard & Widget Architecture
+--------------------------------------------------------------------------------
+Goal: Create a highly customizable home dashboard inside the app where users
+      can add, reorder, resize, and configure in-app widgets.
+
+Tasks:
+1. Widget Framework:
+   - Define common Widget interface / data contracts.
+   - Build a Widget Registry containing predefined & custom widget templates.
+2. Dashboard Engine:
+   - Draggable & reorderable grid layout (LazyVerticalGrid with drag gestures).
+   - Widget state persistence in encrypted Room DB (positions, visibility, sizes).
+3. Predefined In-App Widgets:
+   - Quick Glance: Daily overview, upcoming tasks, habits to complete.
+   - Daily Expense summary widget with mini bar chart.
+   - Water / Steps tracker quick-add widget.
+   - Screen Time circular progress widget.
+   - Quick Note / Quote of the day widget.
+4. Customization Engine:
+   - Widget customization modal (color accent, metric targets, layout style).
+
+
+--------------------------------------------------------------------------------
+PHASE 3: Core Functional Modules
+--------------------------------------------------------------------------------
+Goal: Build the four primary life-management hubs with dedicated screens,
+      CRUD operations, and encrypted models.
+
+Module 3.1: Personal Vault
+- Encrypted storage for personal documents, ID cards, emergency info, passwords,
+  and sensitive notes.
+- Master password / biometric re-authentication check prior to viewing.
+- Secure file attachment storage (encrypted internal storage).
+
+Module 3.2: Health Tracker
+- Daily habit tracker (Water intake, Sleep hours, Workout/Steps, Mood tracker).
+- Medication reminder system with local alarms (AlarmManager / WorkManager).
+- Trend analysis & visual weekly/monthly health progress charts.
+
+Module 3.3: Education Hub
+- Study planner & timetable manager.
+- Subject/Course organizer with markdown-supported note taking.
+- Flashcards system with Spaced Repetition (SRS) algorithms.
+- Exam / assignment deadline tracker with local notifications.
+
+Module 3.4: Expense Tracker
+- Income & expense logging with customizable categories.
+- Budgeting goals (monthly category limits with threshold alerts).
+- Financial analytics & breakdowns (pie charts, trend graphs using Vico/Compose).
+- Multi-currency support & recurring transaction scheduler.
+
+
+--------------------------------------------------------------------------------
+PHASE 4: Digital Wellbeing (Screen Time Controller) & OS Home Screen Widgets
+--------------------------------------------------------------------------------
+Goal: Implement system-level monitoring, app usage limits, and Android
+      Home Screen Widgets.
+
+Tasks:
+1. Screen Time Monitoring:
+   - Request android.permission.PACKAGE_USAGE_STATS permission.
+   - Query UsageStatsManager to extract app usage, unlock count, and screen time.
+   - Aggregate daily/weekly app usage charts.
+2. App Limiter & Blocker:
+   - Define custom daily time limits per target application.
+   - Foreground Service / AccessibilityService / WorkManager monitor.
+   - Full-screen blocking overlay (SYSTEM_ALERT_WINDOW) when limit is exceeded.
+   - Emergency "Focus Mode" / "Bedtime Mode" with instant app blocking.
+3. Android OS Home Screen Widgets (Jetpack Glance):
+   - Design Glance widgets for the user's Android phone home screen.
+   - Widget 1: Personal Daily Summary (Screen time, remaining budget, top task).
+   - Widget 2: Quick Action Logger (Log expense, drink water, take note).
+   - Widget 3: Screen Time Progress Bar.
+
+
+--------------------------------------------------------------------------------
+PHASE 5: Encrypted Backups, Security Hardening & Polish
+--------------------------------------------------------------------------------
+Goal: Final validation, seamless UX, and secure offline backup/restore.
+
+Tasks:
+1. Encrypted Local Backup & Restore:
+   - Export all encrypted data into a single `.hub` file encrypted with a 
+     user-defined passphrase (using Argon2id / PBKDF2 + AES-256-GCM).
+   - Import/restore flow with integrity and checksum verification.
+2. Security Audit & Hardening:
+   - Ensure zero raw text logging (ProGuard / R8 rules to strip Timber/Log).
+   - Obfuscation and code shrinking via ProGuard / R8.
+   - Root detection / Tamper warning (optional user toggle).
+3. Performance & Design Polish:
+   - Smooth 60/120fps animations across all Compose components.
+   - Dynamic Material You theming (Dark / Light / OLED pure black modes).
+   - Accessibility compliance and haptic feedback.
+
+
+================================================================================
+4. PERMISSION MATRIX
+================================================================================
+- USE_BIOMETRIC             : Hardware authentication for vault & sensitive data.
+- PACKAGE_USAGE_STATS       : Required to track app screen time and usage stats.
+- SYSTEM_ALERT_WINDOW       : Used to draw lock overlay when app limits are reached.
+- SCHEDULE_EXACT_ALARM      : Precision reminders for health, exams, and habits.
+- POST_NOTIFICATIONS        : Android 13+ local notifications for alerts & alarms.
+- (NO INTERNET PERMISSION)  : Enforces 100% offline security with zero data leaks.
+================================================================================

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "692146183975",
+    "project_id": "personal-hub-93678",
+    "storage_bucket": "personal-hub-93678.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:692146183975:android:474709f29683cc50ea9302",
+        "android_client_info": {
+          "package_name": "com.srivatsan.Viyora"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBA9d71Ly9_4v_7na1S8YVdOX42HND9QzY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

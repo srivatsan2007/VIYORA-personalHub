@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.USE_BIOMETRIC" />
+
+    <application
+        android:name=".PersonalLifeApplication"
+        android:allowBackup="false"
+        android:icon="@drawable/ic_viyora_logo"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/ic_viyora_logo"
+        android:supportsRtl="true"
+        android:theme="@android:style/Theme.Material.NoActionBar">
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".widget.WidgetConfigurationActivity"
+            android:exported="true"
+            android:theme="@android:style/Theme.Material.NoActionBar">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />
+            </intent-filter>
+        </activity>
+
+        <!-- OS Home Screen Widgets -->
+        <receiver
+            android:name=".widget.AnalogClockWidgetProvider"
+            android:exported="true"
+            android:label="@string/widget_analog_clock_label">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_analog_clock_info" />
+        </receiver>
+
+        <receiver
+            android:name=".widget.DigitalClockWidgetProvider"
+            android:exported="true"
+            android:label="@string/widget_digital_clock_label">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_digital_clock_info" />
+        </receiver>
+
+        <receiver
+            android:name=".widget.HybridClockWidgetProvider"
+            android:exported="true"
+            android:label="@string/widget_hybrid_clock_label">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_hybrid_clock_info" />
+        </receiver>
+
+        <receiver
+            android:name=".widget.BatteryWidgetProvider"
+            android:exported="true"
+            android:label="@string/widget_battery_label">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_battery_info" />
+        </receiver>
+
+        <receiver
+            android:name=".widget.QuotesWidgetProvider"
+            android:exported="true"
+            android:label="@string/widget_quotes_label">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_quotes_info" />
+        </receiver>
+
+        <receiver
+            android:name=".widget.ScreenTimeWidgetProvider"
+            android:exported="true"
+            android:label="@string/widget_screentime_label">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_screentime_info" />
+        </receiver>
+
+        <receiver
+            android:name=".widget.MusicWidgetProvider"
+            android:exported="true"
+            android:label="@string/widget_music_label">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_music_info" />
+        </receiver>
+
+    </application>
+
+</manifest>

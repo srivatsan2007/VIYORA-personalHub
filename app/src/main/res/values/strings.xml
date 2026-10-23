@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Viyora</string>
+    <string name="app_tagline">Your Personal , Your Way</string>
+    <string name="widget_analog_clock_label">Viyora: Analog Clock</string>
+    <string name="widget_analog_clock_desc">Classic minimalist analog dial with vector hands</string>
+    <string name="widget_digital_clock_label">Viyora: Digital Clock</string>
+    <string name="widget_digital_clock_desc">Modern digital time, date, and status banner</string>
+    <string name="widget_hybrid_clock_label">Viyora: Hybrid Clock</string>
+    <string name="widget_hybrid_clock_desc">Dual analog dial and digital time with quick action shortcuts</string>
+    <string name="widget_battery_label">Viyora: Battery Gauge</string>
+    <string name="widget_battery_desc">Real-time battery level and charging status indicator</string>
+    <string name="widget_quotes_label">Viyora: Daily Inspiration</string>
+    <string name="widget_quotes_desc">Curated mindfulness, motivation and philosophy quotes</string>
+    <string name="widget_screentime_label">Viyora: Digital Wellbeing</string>
+    <string name="widget_screentime_desc">Screen time and focus session monitor</string>
+    <string name="widget_music_label">Viyora: Music Controller</string>
+    <string name="widget_music_desc">Compact media player and track controls</string>
+</resources>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widget_analog_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/widget_glass_bg"
+    android:padding="12dp">
+
+    <AnalogClock
+        android:id="@+id/analog_clock_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:dial="@drawable/clock_dial"
+        android:hand_hour="@drawable/clock_hour_hand"
+        android:hand_minute="@drawable/clock_minute_hand" />
+
+</RelativeLayout>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widget_quote_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/widget_glass_bg"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center_vertical">
+
+    <!-- Header Pill -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/widget_chip_bg"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DAILY INSPIRATION"
+            android:textColor="#FDE047"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.08" />
+    </LinearLayout>
+
+    <!-- Quote Body -->
+    <TextView
+        android:id="@+id/widget_quote_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="&#8220;We suffer more often in imagination than in reality.&#8221;"
+        android:textColor="#F8FAFC"
+        android:textSize="14sp"
+        android:textStyle="italic"
+        android:maxLines="3"
+        android:ellipsize="end"
+        android:layout_marginTop="8dp" />
+
+    <!-- Quote Author -->
+    <TextView
+        android:id="@+id/widget_quote_author"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="— Seneca"
+        android:textColor="#94A3B8"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:layout_marginTop="4dp" />
+
+</LinearLayout>
