@@ -2,6 +2,8 @@
 <resources>
     <string name="app_name">Viyora</string>
     <string name="app_tagline">Your Personal , Your Way</string>
+
+    <!-- Core Widgets -->
     <string name="widget_analog_clock_label">Viyora: Analog Clock</string>
     <string name="widget_analog_clock_desc">Classic minimalist analog dial with vector hands</string>
     <string name="widget_digital_clock_label">Viyora: Digital Clock</string>
@@ -16,4 +18,22 @@
     <string name="widget_screentime_desc">Screen time and focus session monitor</string>
     <string name="widget_music_label">Viyora: Music Controller</string>
     <string name="widget_music_desc">Compact media player and track controls</string>
+
+    <!-- Google Pixel Widgets -->
+    <string name="widget_pixel_glance_label">Pixel: At a Glance</string>
+    <string name="widget_pixel_glance_desc">Live date and battery pill in Material You pill layout</string>
+    <string name="widget_pixel_clock_label">Pixel: Scalloped Clock</string>
+    <string name="widget_pixel_clock_desc">Material You 12-lobed petal clock with real-time system stats</string>
+
+    <!-- Nothing OS Widgets -->
+    <string name="widget_nothing_clock_label">Nothing: NDot Digital Clock</string>
+    <string name="widget_nothing_clock_desc">Stark monochrome dot-matrix clock with signature red accent dot</string>
+    <string name="widget_nothing_battery_label">Nothing: Red-Dot Battery Dial</string>
+    <string name="widget_nothing_battery_desc">Minimalist circular black dial with NDot battery gauge</string>
+
+    <!-- Samsung One UI Widgets -->
+    <string name="widget_oneui_clock_label">One UI: Squircle Clock</string>
+    <string name="widget_oneui_clock_desc">Samsung One UI 26dp squircle with real-time time and system pill</string>
+    <string name="widget_oneui_battery_label">One UI: Device Battery Card</string>
+    <string name="widget_oneui_battery_desc">Samsung One UI multi-device style battery progress card</string>
 </resources>

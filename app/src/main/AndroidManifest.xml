@@ -76,6 +76,11 @@
             android:label="@string/widget_battery_label">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+                <action android:name="android.intent.action.BATTERY_LOW" />
+                <action android:name="android.intent.action.BATTERY_OKAY" />
+                <action android:name="android.intent.action.USER_PRESENT" />
             </intent-filter>
             <meta-data
                 android:name="android.appwidget.provider"
@@ -116,6 +121,99 @@
             <meta-data
                 android:name="android.appwidget.provider"
                 android:resource="@xml/widget_music_info" />
+        </receiver>
+
+        <!-- Google Pixel Widgets -->
+        <receiver
+            android:name=".widget.PixelAtAGlanceWidgetProvider"
+            android:exported="true"
+            android:label="@string/widget_pixel_glance_label">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_pixel_at_a_glance_info" />
+        </receiver>
+
+        <receiver
+            android:name=".widget.PixelClockWidgetProvider"
+            android:exported="true"
+            android:label="@string/widget_pixel_clock_label">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_pixel_clock_info" />
+        </receiver>
+
+        <!-- Nothing OS Widgets -->
+        <receiver
+            android:name=".widget.NothingClockWidgetProvider"
+            android:exported="true"
+            android:label="@string/widget_nothing_clock_label">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_nothing_clock_info" />
+        </receiver>
+
+        <receiver
+            android:name=".widget.NothingBatteryWidgetProvider"
+            android:exported="true"
+            android:label="@string/widget_nothing_battery_label">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_nothing_battery_info" />
+        </receiver>
+
+        <!-- Samsung One UI Widgets -->
+        <receiver
+            android:name=".widget.OneUiClockWidgetProvider"
+            android:exported="true"
+            android:label="@string/widget_oneui_clock_label">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_oneui_clock_info" />
+        </receiver>
+
+        <receiver
+            android:name=".widget.OneUiBatteryWidgetProvider"
+            android:exported="true"
+            android:label="@string/widget_oneui_battery_label">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_oneui_battery_info" />
         </receiver>
 
     </application>

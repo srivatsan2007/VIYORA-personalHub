@@ -16,6 +16,88 @@ object WidgetRegistry {
 
     val definitions: List<WidgetDefinition> = listOf(
         // ==========================================
+        // OS ECOSYSTEMS: GOOGLE PIXEL, NOTHING OS & SAMSUNG ONE UI
+        // ==========================================
+        WidgetDefinition(
+            id = "pixel_at_a_glance",
+            name = "Pixel: At a Glance",
+            description = "Google Pixel Material You pill with real-time day, date, and live battery stats.",
+            category = WidgetCategory.ECOSYSTEM,
+            defaultSize = WidgetSizePreset.WIDE_4X1,
+            supportedSizes = listOf(WidgetSizePreset.WIDE_4X1, WidgetSizePreset.MEDIUM_4X2),
+            defaultTheme = WidgetThemePreset.PIXEL_MATERIAL_YOU,
+            capabilities = setOf(WidgetCapability.REALTIME_CLOCK, WidgetCapability.BATTERY_MONITORING, WidgetCapability.INTERACTIVE_CLICKS),
+            requiredPermission = WidgetPermissionRequirement.NONE,
+            status = WidgetStatus.VERIFIED,
+            providerClassName = "com.personallife.app.widget.PixelAtAGlanceWidgetProvider"
+        ),
+        WidgetDefinition(
+            id = "pixel_scalloped_clock",
+            name = "Pixel: Scalloped Clock",
+            description = "Iconic 12-lobed petal clock in Material You pastel tones with live digital time and date.",
+            category = WidgetCategory.ECOSYSTEM,
+            defaultSize = WidgetSizePreset.SQUARE_2X2,
+            supportedSizes = listOf(WidgetSizePreset.SQUARE_2X2, WidgetSizePreset.MEDIUM_4X2),
+            defaultTheme = WidgetThemePreset.PIXEL_MATERIAL_YOU,
+            capabilities = setOf(WidgetCapability.REALTIME_CLOCK, WidgetCapability.BATTERY_MONITORING, WidgetCapability.INTERACTIVE_CLICKS),
+            requiredPermission = WidgetPermissionRequirement.NONE,
+            status = WidgetStatus.VERIFIED,
+            providerClassName = "com.personallife.app.widget.PixelClockWidgetProvider"
+        ),
+        WidgetDefinition(
+            id = "nothing_dot_clock",
+            name = "Nothing: Dot-Matrix Clock",
+            description = "Nothing OS monochrome digital clock with signature red indicator and live system details.",
+            category = WidgetCategory.ECOSYSTEM,
+            defaultSize = WidgetSizePreset.MEDIUM_4X2,
+            supportedSizes = listOf(WidgetSizePreset.MEDIUM_4X2, WidgetSizePreset.LARGE_4X3),
+            defaultTheme = WidgetThemePreset.NOTHING_DOT,
+            capabilities = setOf(WidgetCapability.REALTIME_CLOCK, WidgetCapability.BATTERY_MONITORING, WidgetCapability.INTERACTIVE_CLICKS),
+            requiredPermission = WidgetPermissionRequirement.NONE,
+            status = WidgetStatus.VERIFIED,
+            providerClassName = "com.personallife.app.widget.NothingClockWidgetProvider"
+        ),
+        WidgetDefinition(
+            id = "nothing_red_battery",
+            name = "Nothing: Red-Dot Battery",
+            description = "Minimalist dark circular dial with live battery percentage and charging indicator.",
+            category = WidgetCategory.ECOSYSTEM,
+            defaultSize = WidgetSizePreset.SQUARE_2X2,
+            supportedSizes = listOf(WidgetSizePreset.SQUARE_2X2, WidgetSizePreset.COMPACT_2X1),
+            defaultTheme = WidgetThemePreset.NOTHING_DOT,
+            capabilities = setOf(WidgetCapability.BATTERY_MONITORING, WidgetCapability.INTERACTIVE_CLICKS),
+            requiredPermission = WidgetPermissionRequirement.NONE,
+            status = WidgetStatus.VERIFIED,
+            providerClassName = "com.personallife.app.widget.NothingBatteryWidgetProvider"
+        ),
+        WidgetDefinition(
+            id = "oneui_squircle_clock",
+            name = "One UI: Squircle Clock",
+            description = "Samsung One UI 26dp squircle with large typography, live date, and system pill.",
+            category = WidgetCategory.ECOSYSTEM,
+            defaultSize = WidgetSizePreset.MEDIUM_4X2,
+            supportedSizes = listOf(WidgetSizePreset.MEDIUM_4X2, WidgetSizePreset.WIDE_4X1),
+            defaultTheme = WidgetThemePreset.ONE_UI,
+            capabilities = setOf(WidgetCapability.REALTIME_CLOCK, WidgetCapability.BATTERY_MONITORING, WidgetCapability.INTERACTIVE_CLICKS),
+            requiredPermission = WidgetPermissionRequirement.NONE,
+            status = WidgetStatus.VERIFIED,
+            providerClassName = "com.personallife.app.widget.OneUiClockWidgetProvider"
+        ),
+        WidgetDefinition(
+            id = "oneui_device_battery",
+            name = "One UI: Device Battery Card",
+            description = "Samsung One UI multi-device battery card with live level progress and state indicator.",
+            category = WidgetCategory.ECOSYSTEM,
+            defaultSize = WidgetSizePreset.MEDIUM_4X2,
+            supportedSizes = listOf(WidgetSizePreset.MEDIUM_4X2, WidgetSizePreset.SQUARE_2X2),
+            defaultTheme = WidgetThemePreset.ONE_UI,
+            capabilities = setOf(WidgetCapability.BATTERY_MONITORING, WidgetCapability.INTERACTIVE_CLICKS),
+            requiredPermission = WidgetPermissionRequirement.NONE,
+            status = WidgetStatus.VERIFIED,
+            providerClassName = "com.personallife.app.widget.OneUiBatteryWidgetProvider"
+        ),
+
+        // ==========================================
         // CATEGORY A: CLOCK WIDGETS
         // ==========================================
         WidgetDefinition(
@@ -80,7 +162,8 @@ object WidgetRegistry {
             defaultTheme = WidgetThemePreset.OLIVE_AND_CREAM,
             capabilities = setOf(WidgetCapability.REALTIME_CLOCK, WidgetCapability.TRANSLUCENT_GLASS),
             requiredPermission = WidgetPermissionRequirement.NONE,
-            status = WidgetStatus.IMPLEMENTED
+            status = WidgetStatus.VERIFIED,
+            providerClassName = "com.personallife.app.widget.DigitalClockWidgetProvider"
         ),
         WidgetDefinition(
             id = "clock_amoled_pure",
@@ -92,7 +175,8 @@ object WidgetRegistry {
             defaultTheme = WidgetThemePreset.AMOLED_NEON,
             capabilities = setOf(WidgetCapability.REALTIME_CLOCK, WidgetCapability.CUSTOM_ACCENT_COLOR),
             requiredPermission = WidgetPermissionRequirement.NONE,
-            status = WidgetStatus.IMPLEMENTED
+            status = WidgetStatus.VERIFIED,
+            providerClassName = "com.personallife.app.widget.DigitalClockWidgetProvider"
         ),
         WidgetDefinition(
             id = "clock_roman_analog",
@@ -104,7 +188,8 @@ object WidgetRegistry {
             defaultTheme = WidgetThemePreset.ROSE_QUARTZ,
             capabilities = setOf(WidgetCapability.REALTIME_CLOCK, WidgetCapability.TRANSLUCENT_GLASS),
             requiredPermission = WidgetPermissionRequirement.NONE,
-            status = WidgetStatus.IMPLEMENTED
+            status = WidgetStatus.VERIFIED,
+            providerClassName = "com.personallife.app.widget.AnalogClockWidgetProvider"
         ),
 
         // ==========================================
@@ -133,7 +218,8 @@ object WidgetRegistry {
             defaultTheme = WidgetThemePreset.OLIVE_AND_CREAM,
             capabilities = setOf(WidgetCapability.MEDIA_PLAYBACK_CONTROL, WidgetCapability.TRANSLUCENT_GLASS),
             requiredPermission = WidgetPermissionRequirement.MEDIA_SESSION,
-            status = WidgetStatus.IMPLEMENTED
+            status = WidgetStatus.VERIFIED,
+            providerClassName = "com.personallife.app.widget.MusicWidgetProvider"
         ),
         WidgetDefinition(
             id = "music_waveform_glass",
@@ -145,7 +231,8 @@ object WidgetRegistry {
             defaultTheme = WidgetThemePreset.FROSTED_GLASS,
             capabilities = setOf(WidgetCapability.MEDIA_PLAYBACK_CONTROL, WidgetCapability.TRANSLUCENT_GLASS),
             requiredPermission = WidgetPermissionRequirement.MEDIA_SESSION,
-            status = WidgetStatus.IMPLEMENTED
+            status = WidgetStatus.VERIFIED,
+            providerClassName = "com.personallife.app.widget.MusicWidgetProvider"
         ),
 
         // ==========================================
@@ -174,7 +261,8 @@ object WidgetRegistry {
             defaultTheme = WidgetThemePreset.FROSTED_GLASS,
             capabilities = setOf(WidgetCapability.BATTERY_MONITORING, WidgetCapability.TRANSLUCENT_GLASS),
             requiredPermission = WidgetPermissionRequirement.NONE,
-            status = WidgetStatus.IMPLEMENTED
+            status = WidgetStatus.VERIFIED,
+            providerClassName = "com.personallife.app.widget.BatteryWidgetProvider"
         ),
 
         // ==========================================

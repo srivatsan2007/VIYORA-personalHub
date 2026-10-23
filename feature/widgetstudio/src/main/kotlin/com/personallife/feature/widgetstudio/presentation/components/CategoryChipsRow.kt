@@ -74,6 +74,7 @@ fun CategoryChipsRow(
                     WidgetCategory.NOTES -> Color(0xFFA78BFA)
                     WidgetCategory.SYSTEM_INFO -> Color(0xFF94A3B8)
                     WidgetCategory.UTILITIES -> Color(0xFFE2E8F0)
+                    WidgetCategory.ECOSYSTEM -> Color(0xFFD0BCFF)
                     else -> Color(0xFF38BDF8)
                 },
                 onClick = {

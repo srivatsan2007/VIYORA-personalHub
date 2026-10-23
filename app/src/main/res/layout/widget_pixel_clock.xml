@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widget_pixel_clock_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/widget_pixel_flower_bg"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Live Real-Time Clock -->
+    <TextClock
+        android:id="@+id/widget_pixel_clock_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-black"
+        android:format12Hour="hh:mm"
+        android:format24Hour="HH:mm"
+        android:textColor="#F2E7FE"
+        android:textSize="36sp" />
+
+    <TextView
+        android:id="@+id/widget_pixel_clock_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="TUE, OCT 23"
+        android:textColor="#D0BCFF"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/widget_pixel_clock_battery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:fontFamily="sans-serif"
+        android:text="● 64% Battery"
+        android:textColor="#CAC4D0"
+        android:textSize="11sp" />
+
+</LinearLayout>

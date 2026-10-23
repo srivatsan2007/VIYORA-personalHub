@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widget_nothing_clock_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/widget_nothing_bg"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Header: NDot style brand tag -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="6dp"
+            android:layout_height="6dp"
+            android:background="#E11D48" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:fontFamily="monospace"
+            android:letterSpacing="0.2"
+            android:text="NOTHING (R)"
+            android:textColor="#A1A1AA"
+            android:textSize="10sp" />
+    </LinearLayout>
+
+    <!-- Digital Time in stark white monospace -->
+    <TextClock
+        android:id="@+id/widget_nothing_clock_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:fontFamily="monospace"
+        android:format12Hour="hh:mm"
+        android:format24Hour="HH:mm"
+        android:letterSpacing="0.1"
+        android:textColor="#FFFFFF"
+        android:textSize="38sp" />
+
+    <!-- Live Date and Battery in NDot Style -->
+    <TextView
+        android:id="@+id/widget_nothing_clock_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:fontFamily="monospace"
+        android:letterSpacing="0.15"
+        android:text="23 OCT // 64% PWR"
+        android:textColor="#E11D48"
+        android:textSize="11sp" />
+
+</LinearLayout>

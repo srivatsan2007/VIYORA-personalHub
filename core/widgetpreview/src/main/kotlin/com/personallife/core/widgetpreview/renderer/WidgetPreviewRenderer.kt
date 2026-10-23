@@ -99,6 +99,7 @@ fun WidgetPreviewRenderer(
             WidgetCategory.HEALTH -> HealthPreviewContent(definition, configuration, accentColor, textColor, subtextColor)
             WidgetCategory.NOTES -> NotesPreviewContent(definition, configuration, accentColor, textColor, subtextColor)
             WidgetCategory.SYSTEM_INFO -> SystemInfoPreviewContent(definition, configuration, accentColor, textColor, subtextColor)
+            WidgetCategory.ECOSYSTEM -> EcosystemPreviewContent(definition, configuration, accentColor, textColor, subtextColor)
             else -> GenericPreviewContent(definition, configuration, accentColor, textColor, subtextColor)
         }
     }
@@ -767,6 +768,124 @@ private fun SystemInfoPreviewContent(
         )
         Spacer(modifier = Modifier.height(6.dp))
         Text(text = "Wi-Fi Connected • 5.2 GHz • Battery 85%", color = subtextColor, fontSize = 11.sp)
+    }
+}
+
+// -------------------------------------------------------------
+// OS ECOSYSTEMS: GOOGLE PIXEL, NOTHING OS & SAMSUNG ONE UI
+// -------------------------------------------------------------
+@Composable
+private fun EcosystemPreviewContent(
+    definition: WidgetDefinition,
+    config: WidgetConfiguration,
+    accentColor: Color,
+    textColor: Color,
+    subtextColor: Color
+) {
+    val currentTime = if (config.is24Hour) "14:35" else "2:35 PM"
+    val currentDate = SimpleDateFormat("EEEE, MMM d", Locale.getDefault()).format(Date())
+
+    when (definition.id) {
+        "pixel_at_a_glance" -> {
+            Row(
+                modifier = Modifier.fillMaxWidth().padding(horizontal = 4.dp, vertical = 2.dp),
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.SpaceBetween
+            ) {
+                Column(modifier = Modifier.weight(1f)) {
+                    Text(text = currentDate, color = textColor, fontSize = 16.sp, fontWeight = FontWeight.Bold)
+                    Text(text = "At a Glance • Viyora", color = accentColor, fontSize = 12.sp)
+                }
+                Box(
+                    modifier = Modifier
+                        .clip(RoundedCornerShape(16.dp))
+                        .background(accentColor.copy(alpha = 0.2f))
+                        .padding(horizontal = 12.dp, vertical = 6.dp)
+                ) {
+                    Text(text = "⚡ 64%", color = accentColor, fontSize = 13.sp, fontWeight = FontWeight.Bold)
+                }
+            }
+        }
+        "pixel_scalloped_clock" -> {
+            Column(
+                modifier = Modifier.fillMaxWidth().padding(8.dp),
+                horizontalAlignment = Alignment.CenterHorizontally
+            ) {
+                Text(text = currentTime, color = textColor, fontSize = 34.sp, fontWeight = FontWeight.Black)
+                Text(text = currentDate.uppercase(), color = accentColor, fontSize = 12.sp, fontWeight = FontWeight.Medium)
+                Spacer(modifier = Modifier.height(4.dp))
+                Text(text = "● 64% Battery • Charging", color = subtextColor, fontSize = 11.sp)
+            }
+        }
+        "nothing_dot_clock" -> {
+            Column(
+                modifier = Modifier.fillMaxWidth().padding(6.dp),
+                horizontalAlignment = Alignment.CenterHorizontally
+            ) {
+                Row(verticalAlignment = Alignment.CenterVertically) {
+                    Box(modifier = Modifier.size(6.dp).background(Color(0xFFE11D48)))
+                    Spacer(modifier = Modifier.width(6.dp))
+                    Text(text = "NOTHING (R)", color = Color(0xFFA1A1AA), fontSize = 10.sp, fontFamily = FontFamily.Monospace)
+                }
+                Text(text = currentTime, color = Color.White, fontSize = 36.sp, fontFamily = FontFamily.Monospace, fontWeight = FontWeight.Bold)
+                Text(text = "23 OCT // 64% PWR", color = Color(0xFFE11D48), fontSize = 11.sp, fontFamily = FontFamily.Monospace)
+            }
+        }
+        "nothing_red_battery" -> {
+            Column(
+                modifier = Modifier.fillMaxWidth().padding(8.dp),
+                horizontalAlignment = Alignment.CenterHorizontally
+            ) {
+                Box(modifier = Modifier.size(8.dp).clip(CircleShape).background(Color(0xFFE11D48)))
+                Spacer(modifier = Modifier.height(4.dp))
+                Text(text = "64%", color = Color.White, fontSize = 32.sp, fontFamily = FontFamily.Monospace, fontWeight = FontWeight.Bold)
+                Text(text = "BATTERY", color = Color(0xFFA1A1AA), fontSize = 10.sp, fontFamily = FontFamily.Monospace)
+            }
+        }
+        "oneui_squircle_clock" -> {
+            Row(
+                modifier = Modifier.fillMaxWidth().padding(6.dp),
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.SpaceBetween
+            ) {
+                Column(modifier = Modifier.weight(1f)) {
+                    Text(text = currentTime, color = Color.White, fontSize = 32.sp, fontWeight = FontWeight.Light)
+                    Text(text = currentDate, color = Color(0xFF94A3B8), fontSize = 12.sp)
+                }
+                Box(
+                    modifier = Modifier
+                        .clip(RoundedCornerShape(12.dp))
+                        .background(Color(0xFF38BDF8).copy(alpha = 0.2f))
+                        .padding(horizontal = 12.dp, vertical = 6.dp)
+                ) {
+                    Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                        Text(text = "64%", color = Color(0xFF38BDF8), fontSize = 15.sp, fontWeight = FontWeight.Bold)
+                        Text(text = "ONE UI", color = Color(0xFF64748B), fontSize = 9.sp)
+                    }
+                }
+            }
+        }
+        "oneui_device_battery" -> {
+            Column(modifier = Modifier.fillMaxWidth().padding(6.dp)) {
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.SpaceBetween
+                ) {
+                    Text(text = "Galaxy Phone", color = Color.White, fontSize = 14.sp, fontWeight = FontWeight.Medium)
+                    Text(text = "64%", color = Color(0xFF38BDF8), fontSize = 15.sp, fontWeight = FontWeight.Bold)
+                }
+                Spacer(modifier = Modifier.height(8.dp))
+                LinearProgressIndicator(
+                    progress = { 0.64f },
+                    modifier = Modifier.fillMaxWidth().height(8.dp).clip(RoundedCornerShape(4.dp)),
+                    color = Color(0xFF38BDF8),
+                    trackColor = Color(0xFF334155)
+                )
+                Spacer(modifier = Modifier.height(6.dp))
+                Text(text = "Battery • Normal", color = Color(0xFF94A3B8), fontSize = 11.sp)
+            }
+        }
+        else -> GenericPreviewContent(definition, config, accentColor, textColor, subtextColor)
     }
 }
 

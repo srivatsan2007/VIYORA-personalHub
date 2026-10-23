@@ -19,7 +19,8 @@ enum class WidgetCategory(val title: String, val subtitle: String, val iconName:
     HEALTH("Health", "Water Intake, Step Count & Goals", "favorite"),
     NOTES("Vault & Notes", "Encrypted Scratchpad & Documents", "lock"),
     SYSTEM_INFO("System", "Storage, Connectivity & Device Info", "info"),
-    UTILITIES("Utilities", "Timers, Scanners & Tools", "build")
+    UTILITIES("Utilities", "Timers, Scanners & Tools", "build"),
+    ECOSYSTEM("OS Ecosystems", "Pixel, Nothing OS & One UI", "devices")
 }
 
 /**
@@ -200,10 +201,52 @@ data class WidgetThemePreset(
             isDarkTheme = true
         )
 
+        val PIXEL_MATERIAL_YOU = WidgetThemePreset(
+            name = "PIXEL_MATERIAL_YOU",
+            displayName = "Google Pixel",
+            backgroundColorHex = "#2B2930",
+            accentColorHex = "#D0BCFF",
+            textColorHex = "#FFFFFF",
+            secondaryTextColorHex = "#CAC4D0",
+            glassOpacity = 0.90f,
+            cornerRadiusDp = 32,
+            borderWidthDp = 1.5f,
+            isDarkTheme = true
+        )
+
+        val NOTHING_DOT = WidgetThemePreset(
+            name = "NOTHING_DOT",
+            displayName = "Nothing OS",
+            backgroundColorHex = "#000000",
+            accentColorHex = "#E11D48",
+            textColorHex = "#FFFFFF",
+            secondaryTextColorHex = "#A1A1AA",
+            glassOpacity = 0.98f,
+            cornerRadiusDp = 24,
+            borderWidthDp = 1.5f,
+            isDarkTheme = true
+        )
+
+        val ONE_UI = WidgetThemePreset(
+            name = "ONE_UI",
+            displayName = "Samsung One UI",
+            backgroundColorHex = "#1E2433",
+            accentColorHex = "#38BDF8",
+            textColorHex = "#FFFFFF",
+            secondaryTextColorHex = "#94A3B8",
+            glassOpacity = 0.90f,
+            cornerRadiusDp = 26,
+            borderWidthDp = 1.0f,
+            isDarkTheme = true
+        )
+
         val allPresets = listOf(
             OLIVE_AND_CREAM,
             MINT_AND_LAVENDER,
             FROSTED_GLASS,
+            PIXEL_MATERIAL_YOU,
+            NOTHING_DOT,
+            ONE_UI,
             CLEAR_TRANSLUCENT,
             AMOLED_NEON,
             DEEP_OCEAN,
